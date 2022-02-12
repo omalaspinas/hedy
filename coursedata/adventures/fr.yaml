@@ -151,92 +151,95 @@ adventures:
                                     affiche 'Elle rebrousse chemin.'
                     ```
                 start_code: ""
-                # TODO: continuer depuis ici
             8:
                 story_text: |
                     ## Histoire
 
-                    In this level you can use multiple lines in your if commands, this way you can upgrade your happy or sad ending!
+                    Dans ce niveau, vous pouvez utiliser plusieurs lignes dans vos commandes `si`, de cette façon vous pouvez améliorer votre fin heureuse ou triste !
 
                 example_code: |
                     ## Exemple de code Hedy
 
                     ```
-                    affiche 'OH NO! The T-rex is closing in!'
-                    end = demande 'Do you want a happy or a sad ending?'
-                    if end is happy
-                        affiche 'Just in time Richard jumps back into the time machine!'
-                        affiche 'Michael types in the code and...'
+                    affiche 'OH NON ! Le T-rex se rapproche !
+                    fin = demande 'Voulez-vous une fin heureuse ou triste ?'
+                    si end est happy
+                        affiche 'Juste à temps, Richard saute à nouveau dans la machine à remonter le temps.'
+                        affiche 'Michael saisit le code et....'
                         affiche '💥ZAP!💥'
-                        affiche 'They are back in their garage'
+                        affiche 'Ils sont de retour dans leur garage.'
                     else
-                        affiche 'Michael yells COME ON RICHARD! RUN FASTER!'
-                        affiche 'But Richard is too slow...'
-                        affiche 'The T-rex closes in and eats him in one big bite!🦖'
+                        affiche 'Michael crie VIENS RICHARD ! COURS PLUS VITE !'
+                        affiche 'Mais Richard est trop lent...'
+                        affiche 'Le T-rex se rapproche et le dévore d'une seule bouchée !🦖'
                     ```
                 start_code: ""
             7:
                 story_text: |
                     ## Histoire
-                    In a histoire, someone says words several times. For example, when someone calls for help or sings a song.
-                    You can put such repetitions in your histoire, in this level with `repeat`.
+
+                    Dans une histoire, quelqu'un dit des mots plusieurs fois. Par exemple, lorsque quelqu'un appelle à l'aide ou chante une chanson.
+                    Vous pouvez mettre de telles répétitions dans votre histoire, dans ce niveau avec `repeat`.
 
                 example_code: |
                     ## Exemple de code Hedy
 
                     ```
-                    affiche 'The prince kept calling for help'
-                    repeat 5 times affiche 'Help!'
-                    affiche 'Why is nobody helping me?'
+                    affiche 'Le prince n'arrêtait pas d'appeler au secours.'
+                    répète 5 fois affiche 'Au secours !'
+                    affiche 'Pourquoi personne ne m'aide ?
                     ```
 
-                start_code: "repeat 5 times affiche 'Help!'"
+                start_code: "répète 5 fois affiche 'Au secours!'"
             5:
                 story_text: |
                     ## Histoire
-                    In this level you can program different endings, which will make your histoire even more fun.
 
-                    Think of two endings for your histoire, for example:
+                    Dans ce niveau, vous pouvez programmer différentes fins, ce qui rendra votre histoire encore plus amusante.
 
-                    - The princess is walking through the forest
-                    - She runs into a monster
+                    Pense à deux fins pour ton histoire, par exemple :
 
-                    - Happy ending: She takes her sword and the monster quickly runs away
-                    - Bad Ending: The monster eats the princess
+                    - La princesse se promène dans la forêt.
+                    - Elle tombe sur un monstre.
 
-                    You can also ensure that a name can be entered again. That works just like in the previous levels. You can combine that with an `if`, and then you have already made a whole program!
+                    - Une fin heureuse: Elle prend son épée et le monstre s'enfuit rapidement.
+                    - Mauvaise triste: Le monstre mange la princesse.
+
+                    Vous pouvez également faire en sorte qu'un nom puisse être saisi à nouveau. Cela fonctionne comme dans les niveaux précédents. Vous pouvez combiner cela avec un `si`, et ainsi vous aurez fait un programme entier !
 
                 example_code: |
                     ## Exemple de code Hedy
 
                     ```
-                    name is demande Who is walking in the forest?
-                    affiche name 'walks through the forest'
-                    affiche name 'encounter a monster'
-                    end is demande Would you like a good or a bad ending?
-                    if end is good affiche name 'takes the sword and the monster quickly runs away'
-                    else affiche 'The monster eats' name
+                    nom est demande Qui se promène dans la forêt ?
+                    affiche nom 'se promène dans la forêt.'
+                    affiche nom 'rencontre un monstre.'
+                    fin est demande Veux-tu une bonne ou une mauvaise fin (bonne / mauvaise)?
+                    si fin est bonne affiche nom 'prend l'épée et le monstre s'enfuit rapidement.'
+                    sinon affiche 'Le monstre mange' nom
                     ```
-                start_code: "affiche 'Here your histoire will start!'"
+                start_code: "affiche 'Ton histoire commence ici!'"
             4:
                 story_text: |
                     ## Histoire
-                    You may have noticed that there is still a problem in the previous levels. Did you try to affiche a sentence that contained the word name?
-                    You can solve that in this level. You must use quotation marks for everything that you are going to affiche.
+
+                    Vous avez peut-être remarqué qu'il y a encore un problème dans les niveaux précédents. Avez-vous essayé d'afficher une phrase contenant le mot nom ?
+                    Vous pouvez résoudre ce problème dans ce niveau. Vous devez utiliser des guillemets pour tout ce que vous allez afficher.
 
                 example_code: |
                     ## Exemple de code Hedy
 
                     ```
-                    name is Hans
-                    affiche 'The name of the main character is' name
-                    affiche name 'is now going to walk in the woods'
-                    affiche name 'is a bit scared'
-                    animals is 🦔, 🐿, 🦉, 🦇
-                    affiche 'He hears the sound of an' animals at random
-                    affiche name 'is afraid this is a haunted forest'
+                    nom est Jean
+                    affiche 'Le nom du personnage principal est ' nom
+                    affiche nom ' va à présent marcher dans la forêt'
+                    affiche nom ' est un peu effrayé'
+                    animaux est 🦔, 🐿, 🦉, 🦇
+                    affiche 'Il entend les bruits dun ' animal au hasard
+                    affiche nom ' a peur que cette forêt soir hantée'
                     ```
-                start_code: "affiche 'Your histoire will be printed here!'"
+                start_code: "affiche 'Ton histoire sera affichée ici!'"
+# TODO: Continue here
             3:
                 story_text: |
                     ## Histoire
