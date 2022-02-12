@@ -1,360 +1,857 @@
 1:
     intro_text: |
-        Bienvenue à Hedy! Au niveau 1, tu peux utiliser les commandes `print`,` ask` et `echo`.
+        Bienvenue à Hedy! Au niveau 1, tu peux utiliser les commandes `affiche`,` demande` et `dit`.
 
-        Sur le côté gauche de votre écran se trouvent toutes les commandes du niveau 1.
+        Sur le côté gauche de ton écran se trouvent toutes les commandes du niveau 1.
 
-        Appuyez sur le bouton bleu et le code sera tapé pour toi!
+        Appuye sur le bouton bleu et le code sera tapé pour toi!
 
-        Essayez le code toi-même avec le bouton vert «Exécuter le code» sous le champ de programmation de gauche.
+        Essaye le code toi-même avec le bouton vert 'Exécuter le code' sous le champ de programmation de gauche.
 
-        Vous ne savez pas quoi programmer? Dans les onglets suivants, vous trouverez des idées sur les éléments à construire.
-    start_code: "print bonjour le monde!"
+    example_code : |
+        ## Exemple de code
+        ```
+        affiche Bonjour!
+        affiche Bienvenu-e à Hedy!
+        ```
+
+    intro_text_2: |
+        Tu peux aussi demander pour une saisie et la répéter avec la commande `dit`.
+        Essaie le code à ta gauche encore une fois.
+
+        Tu ne sais pas quoi créer? Dans les prochains onglets, tu trouveras des idées de programmes à construire.
+    example_code_2: |
+        ## Exemple de code
+        ```
+        demande Quel est ton mom?
+        dit bonjour
+        ```
+
+    start_code: "affiche bonjour le monde!"
     commands:
-    -   name: "print"
-        explanation: "Affiche quelque chose avec `print`."
-        example: "Exemple: print Bonjour et bienvenue à Hedy!"
-        demo_code: "print Bonjour et bienvenue à Hedy!"
-    -   name: "ask"
-        explanation: "Demande quelque chose avec `ask`."
-        example: "Exemple: ask Quelle est ta couleur préférée?"
-        demo_code: "ask Quelle est ta couleur préférée?"
-    -   name: "echo"
-        explanation: "Répète quelque chose avec `echo`."
-        example: "Exemple: echo donc ta couleur préférée est "
+    -   name: "affiche"
+        explanation: "Affiche quelque chose avec `affiche`."
+        example: "Exemple: affiche Bonjour bienvenu-e à Hedy!"
+        demo_code: "affiche Bonjour bienvenu-e à Hedy!"
+    -   name: "demande"
+        explanation: "Demande quelque chose avec `demande`."
+        example: "Exemple: demande Quelle est ta couleur préférée?"
+        demo_code: "demande Quelle est ta couleur préférée?"
+    -   name: "dit"
+        explanation: "Répète quelque chose avec `dit`."
+        example: "Exemple: dit Donc ta couleur préférée est "
         demo_code: |-
-            ask Quelle est ta couleur préférée?
-            echo donc ta couleur préférée est 
+            demande Quelle est ta couleur préférée?
+            dit Donc ta couleur préférée est 
+    -   name: "affiche emojis"
+        explanation: "Affiche un emoji avec `affiche`"
+        example: "Exemple: affiche 🙋‍ 🌍 ❗"
+        demo_code: "affiche 🙋 🌍 ❗"
+    -   name: "avance"
+        explanation: "Dessine une ligne avec `avance`."
+        example: "Exemple: avance 100"
+        demo_code: "avance 100"
+    -   name: "tourne"
+        explanation: "Tourne la tortue qui dessine avec `tourne`"
+        example: "Exemple: tourne"
+        demo_code: |-
+            avance 25
+            tourne gauche
+            avance 25
+            tourne droite
 2:
     intro_text: |
-        Au niveau 2, nous apprenons quelque chose de nouveau. Vous pouvez nommer un mot avec `is`.
-
-        Si vous mettez le code `name is Hedy` en haut de votre programme, vous pouvez alors utiliser name partout. Cela sera alors remplacé par Hedy.
-
-        Le `ask` a changé au niveau 2, vous enregistrez également la réponse avec un nom:
+        Au niveau 2 nous allons apprendre quelque chose de nouveau. Tu peux nommer un mot avec `est`.
+        Tu peux utiliser ce mot dans ton code et il sera remplacé par Hedy comme:
 
         ```
-        reponse is ask quel est votre nom?
+        nom est Hedy
+        affiche Bonjour nom
         ```
 
-        L'impression fonctionne toujours comme au niveau 1 et vous n'avez plus besoin d'une échographie.
-    start_code: "print bonjour le monde!"
+        Note: `demande` a changé, tu peux aussi enregistrer la réponse dans un nom:
+
+        ```
+        réponse est demande Quel est ton nom?
+        ```
+
+        L'affichâge marche toujours comme au niveau 1, et tu n'as plus besoin d'utiliser `dit`.
+
+        Une autre commande à ce niveau est `dors`, qui met le programme en pause pour une seconde.
+        Si tu entres un nombre après la commande `dors`, le programme se met en pause pour autant de secondes.
+
+        ```
+        affiche 'Ma couleur préférée est...'
+        dors 2
+        affiche 'vert!'
+        ```
+    start_code: "affiche bonjour le monde!"
     commands:
-    -   name: "is"
-        explanation: "Donne un nom à un mot que tu peux utiliser dans le programme avec `is`"
-        example: "Exemple: nom is Hedy."
+    -   name: "est"
+        explanation: "Donne un nom à un mot afin de l'utiliser dans le programme avec la commande `est`. Tu peux choisir le nom toi-même."
+        example: "Exemple: nom est Hedy."
         demo_code: |-
-            nom is Hedy
-            print bienvenue nom
-    -   name: "ask"
-        explanation: "Demande quelque chose avec `ask`. Attention! Tu dois donner à la réponse un nom avec `is`."
-        example: "Exemple: couleur is ask Quelle est ta couleur préférée?"
+            nom est Hedy
+            affiche bienvenu-e nom
+    -   name: "demande"
+        explanation: "Demande quelque chose avec la commande `demande`. Attention! Il faut donner une valeur à nom avec `est`."
+        example: "Exemple: couleur est demande Quelle est ta couleur préférée?"
         demo_code: |-
-            couleur is ask Quelle est ta couleur préférée?
-            print couleur est ton préféré !
+            couleur est demande Quelle est ta couleur préférée?
+            affiche couleur est ta préférée!
+    -   name: "dors"
+        explanation: "Laisse Hedy faire une pause pour (quelques) seconde(s)."
+        example: "Exemple: dors 2 "
+        demo_code: |-
+            affiche Laisse moi réfléchir pendant une seconde...
+            dors
+            affiche Hmm... J'ai besoin de 3 secondes supplémentaires...
+            dors 3
+            affiche Eurêka! J'ai trouvé!
+    -   explanation: "Donne un nom à un nombre en utilisant `est`. Tu peux choisir le nom toi-même."
+        example: "Exemple: angle est 90"
+        demo_code: |-
+            angle est 90
+            tourne angle
+            avance 100
+        name: est - tortue
 3:
     intro_text: |
-        Au niveau 3, vous pouvez également faire une liste. Vous pouvez ensuite choisir n'importe quoi dans la liste. Vous faites cela avec `at random` (vous dites: et ren-dom).
+        Au niveau 3 tu peux aussi faire une liste. Tu peux laisser l'ordinateur choisir un élément au hasard dans la liste.
+        Tu peux faire ça avec `au hasard`.
 
         ```
-        animaux is chien, chat, kangourou
-        print animaux at random
+        animaux est chien, chat, kangourou
+        affiche animaux au hasard
         ```
 
-        Vous trouverez tous les codes du niveau 3 dans la barre de gauche. Il existe également des onglets avec des affectations.
-    start_code: "print bonjour le monde!"
+        Tu peux aussi ajouter des éléments à la liste avec `ajoute` et supprimer des éléments avec `supprime`.
+
+        ```
+        animaux est chien, chat, kangourou
+        ajoute penguin à animaux
+        supprime chat de animaux
+        affiche animaux au hasard
+        ```
+
+    start_code: "affiche bonjour le monde!"
     commands:
-    -   name: "choisi_au hasard"
-        explanation: "Choisi un mot au hasard dans un groupe avec `at random`"
-        example: "Exemple: animaux is chien, chat, kangourou"
+    -   name: choisis_au_hasard
+        explanation: Choisis au hasard d'un groupe avec `au` et `hasard`
+        example: 'Exemple: animaux est chien, chat, kangourou.'
         demo_code: |-
-            animaux is chien, chat, kangourou
-            print animaux at random
+            animaux est chien, chat, kangourou
+            affiche animaux au hasard
+    -   name: "Ajoute"
+        explanation: "Ajoute un élément à la liste"
+        example: "Exemple: ajoute chien à animaux"
+        demo_code: |-
+            animaux est vache, chat
+            ajoute chien à animaux
+    -   name: "Supprime"
+        explanation: "Supprime un élément de la liste"
+        example: "Exemple: supprime chien de animaux"
+        demo_code: |-
+            animaux est chat, chien, vache
+            supprime chien de animaux
 4:
-    start_code: "print 'Bonjour le monde'"
-    intro_text: |4
+    start_code: "affiche 'Bonjour le monde'"
+    intro_text: |
+        Au niveau 4 `demande` et `affiche` ont changé.
 
-        `Print` et `impreso` changent au niveau 5.
+        Tu dois mettre le texte que tu veux afficher entre des guillemets (qui sont des les symboles apostrophes), `''`.
 
-        Vous devez placer le texte que vous souhaitez imprimer entre guillemets.
+        Ceci est pratique parce que maintenant tu peux afficher tous les mots que tu veux. Également les mots que tu as utilisé pour stocker quelque chose avec la commande `est`.
 
-        Ceci est utile, car vous pouvez désormais imprimer tous les mots souhaités. Aussi les mots que vous avez utilisés pour stocker quelque chose avec `is`.
+        La plupart des langâges de programmation utilisent les guillemets lors de l'affichâge, ainsi nous nous approchons un peu plus de la vraie programmation!
 
-        La plupart des langages de programmation utilisent également des guillemets lors de l'impression, nous nous rapprochons donc également de la programmation réelle!
+        ## Les exercices deviennent de plus en plus complexes
 
-        ## Les affectations deviennent de plus en plus difficiles
-        Vous retrouverez les commandes sur la gauche et les affectations dans les onglets suivants. Les affectations deviennent de plus en plus difficiles dans les onglets successifs.
-        Il est donc préférable de commencer à gauche avec l'histoire, et de travailler à droite pour être de plus en plus contestée.
+        Tu vas trouver les commandes sur la gauche à nouveau, et les exercices sur les onglets suivants. Les exercices deviennent de plus en plus difficiles au fur et à mesure que tu avances dans les onglets.
+        Ainsi, il est mieux de commencer à gauche en suivant l'histoire et travailler à droite afin d'augmenter la complexité.
     commands:
-    -   name: "print"
-        explanation: "Afficher exactement ce qui est entre les guilllemets"
-        example: "Exemple: print 'Bonjour et bienvenue à Hedy.'"
-        demo_code: "print 'Bonjour et bienvenue à Hedy.'"
-    -   name: "is"
-        explanation: "Donne un nom à un mot que tu peux utiliser dans le programme sans guillemets"
-        example: "Exemple: nom is Hedy."
+    -   name: "affiche"
+        explanation: "Affiche exactement en utilisant les guillemets"
+        example: "Exemple: affiche 'Bonjour bienvenu-e à Hedy.'"
+        demo_code: "affiche 'Bonjour bienvenu-e à Hedy.'"
+    -   name: "est"
+        explanation: "Donne un nom à un texte et `affiche` sans les guillemets"
+        example: "Exemple: nom est Hedy."
         demo_code: |-
-            nom is Hedy
-            print 'mon nom est ' nom
-    -   name: "ask"
-        explanation: "Demande quelque chose avec `ask`."
-        example: "Exemple: couleur is ask 'Quelle est ta couleur préférée?'"
+            nom est Hedy
+            affiche 'mon nom est ' nom
+    -   name: "demande"
+        explanation: "Demande quelque chose avec `demande`."
+        example: "Exemple: couleur est demande 'Quelle est ta couleur préférée?'"
         demo_code: |-
-            couleur is ask 'Quelle est ta couleur préférée?'
-            print couleur ' est ta couleur préférée!'
+            couleur est demande 'Quelle est ta couleur préférée?'
+            affiche couleur ' est ta préférée!'
 5:
     start_code: |-
-        nom is ask 'quel est ton nom?'
-        if nom is Hedy print 'cool!' else print 'mouais'
+        nom est demande 'Quel est ton nom?'
+        si nom est Hedy affiche 'cool!' sinon affiche 'bof'
     intro_text: |
-        `ask` et` print` fonctionnent toujours comme au niveau 4.
+        `demande` et `affiche` marchent toujours comme au niveau 4.
 
-         Au niveau 5, il y a quelque chose de nouveau, le `if`! If est l'anglais pour se. Avec le `if`, vous pouvez choisir entre deux options différentes.
+        Au niveau 5 il y a une nouveauté, le `si`! Avec le `si` tu peux choisir entre deux options différentes.
 
-         ## Exemple de code Hedy
-         ```
-         nom is ask 'quel est votre nom?'
-         if nom is Hedy print 'cool!' else print 'moins amusant!'
-         ```
+        ## Exemple de code Hedy
 
-         Ce code s'imprime cool! si vous entrez Hedy comme nom, et moins amusant! si vous entrez autre chose.
+        ```
+        nom est demande 'Quel est ton nom?'
+        si nom est Hedy affiche 'cool' sinon affiche 'bof!'
+        ```
 
-         ## Les affectations deviennent de plus en plus difficiles
+        Ce code affiche cool si tu entres Hedy comme nom et bof! si tu entres quelques chose d'autre.
 
-         Toujours au niveau 5, les affectations dans les onglets deviennent de plus en plus difficiles. Alors faites-les de gauche à droite.
+        Quand nous voulons vérifier si un quelque chose se trouve dans une liste, nous pouvons utiliser `dans` entre le quelque chose et la liste.
+
+        ## Exemple de code Hedy
+
+        ```
+        jolies_couelurs est vert, jaune
+        couleur est demande 'Quelle est ta couleur préférée?'
+        si couleur dans jolies_couelurs affiche 'joli!' sinon affiche 'bof'
+        ```
+
+        Ce code affche joli! si tu choisis ou jaune, et bof sinon.
+
+        ## Conseil
+        
+        Quelques fois les lignes contenant un `si` deviennent vraiment longues et ne rentrent plus sur une seule ligne. <br> Tu peux diviser le code sur deux lignes, en commençant la seconde ligne au `sinon`:
+    
+        ```
+        nom est demande 'Quel est ton nom?'
+        si nom est Hedy affiche 'joli'
+        sinon affiche 'bof!'
+        ```
+
+        ## Les exercices deviennent de plus en plus difficiles
+
+        Au niveau 5 aussi, les exercices dans les onglets deviennent de plus complexes, alors fais les de gauche à droite.
     commands:
-    -   name: "print"
-        explanation: "Affiche exactement ce qui est entre les guilllemets"
-        example: "Exemple: print 'Bonjour et bienvenue à Hedy.'"
-        demo_code: "print 'Bonjour et bienvenue à Hedy.'"
-    -   name: "ask"
-        explanation: "Demande quelque chose avec `ask`."
-        example: "Exemple: couleur is ask 'Quelle est ta couleur préférée?'"
+    -   name: "affiche"
+        explanation: "Affiche exactement en utilisant les guillemets"
+        example: "Exemple: affiche 'Bonjour bienvenu-e à Hedy.'"
+        demo_code: "affiche 'Bonjour bienvenu-e à Hedy.'"
+    -   name: "demande"
+        explanation: "Demande quelque chose avec `demande`."
+        example: "Exemple: couleur est demande 'Quelle est ta couleur préférée?'"
         demo_code: |-
-            couleur is ask 'Quelle est ta couleur préférée?'
-            print couleur ' est ta couleur préférée!'
-    -   name: "if"
-        explanation: "Fait un choix avec `if`."
-        example: "Exemple: if couleur is vert print 'joli!' else print 'bof'"
+            couleur est demande 'Quelle est ta couleur préférée?'
+            affiche couleur ' est ta préférée!'
+    -   name: "si"
+        explanation: "Fais un choix avec `si`"
+        example: "Exemple: si couleur est vert affiche 'joli!' sinon affiche 'bof'"
         demo_code: |-
-            couleur is ask 'Quelle est ta couleur préférée?'
-            if couleur is vert print 'joli!' else print 'bof'
+            couleur est demande 'Quelle est ta couleur préférée?'
+            si couleur est vert affiche 'joli!' sinon affiche 'bof'
+    -   name: "si avec tortue"
+        explanation: "Fais un choix avec `si`"
+        example: "Exemple: si réponse est loin avance 100 sinon avance 5"
+        demo_code: |-
+            réponse est demande 'Jusqu'où dois-je marcher?'
+            si réponse est loin avance 100 sinon avance 5
+    -   name: "dans"
+        explanation: "Vérifie des éléments avec `dans`"
+        example: "Exemple: si couleur dans jolies_couelurs affiche 'joli!' sinon affiche 'bof'"
+        demo_code: |-
+            jolies_couelurs est vert, jaune
+            couleur est demande 'Quelle est ta couleur préférée?'
+            si couleur dans jolies_couelurs affiche 'joli!' sinon affiche 'bof'
 6:
-    start_code: "print '5 fois 5 font ' 5 * 5"
+    start_code: "affiche '5 fois 5 est ' 5 * 5"
     intro_text: |
-        `ask`,` print` et `if` fonctionnent toujours comme dans les niveaux 5.
-         Mais au niveau 6, il y a quelque chose de nouveau, vous pouvez maintenant aussi calculer.
+        `demande`, `affiche` et `si` marchent toujours au niveau 4.
+        Mais au niveau 6 tu vas apprendre une nouveauté: tu peux à présent également calculer.
 
-         Le plus est simple, vous l'écrivez comme avec les maths: `5 + 5` par exemple. Le moins fonctionne également très bien, qui est `5 - 5`.
+        En plus c'est facile, il suffit d'écrire comme en maths: `5 + 5` par example. Pour la soustraction également: `5 - 5`.
 
-         Le fois sont un peu différentes, car il n'y a pas de fois sur votre clavier. Cherchez, il n'y en a vraiment pas!
-         C'est pourquoi nous faisons les temps avec l'astérisque au-dessus de 8: `5 * 5`. Lisez cela comme "5 fois 5", alors vous vous en souviendrez le plus facile.
-         ## Exemple de code Hedy
-         ```
-         print '5 plus 5 est ' 5 + 5
-         print '5 moins 5 est ' 5 - 5
-         print '5 fois 5 est ' 5 * 5
-         ```
-    commands:
-    -   name: "print"
-        explanation: "Affiche exactement ce qui est entre les guilllemets"
-        example: "Exemple: print '5 fois 5 font ' 5 * 5"
-        demo_code: "print '5 fois 5 font ' 5 * 5"
-    -   name: "ask et if avec des calculs"
-        explanation: "Pose une question sur un calcul avec `ask` et compare le résultat..."
-        example: "Exemple: reponse = ask 'Combien font 10 plus 10?'"
-        demo_code: |-
-            reponse = ask 'Combien font 10 plus 10?'
-            if reponse is 20 print 'Oui!' else print 'Oups'
-    -   name: "`ask` and `if` turtle"
-        explanation: "Ask the user how many angles they want"
-        example: "Example: angles = ask 'How many angles?'"
-        demo_code: |-
-            angles = ask 'How many angles?'
-            angle = 360 / angles
-            forward 50
-7:
-    start_code: "repeat 3 times print 'Hedy est amusant!'"
-    intro_text: |
-        `ask`, `print` et `if` fonctionnent exactement comme au niveau 4 et 5.
-        Le niveau 5 ajoute la commande `repeat`.
-        `repeat` te permet d’exécuter une ligne de commande plusieurs fois.
+        Le fois est un peu différent, parce qu'il n'existe pas de symbole "fois" sur ton clavier. Cherche, tu verras il n'y est pas!
+        C'est pourquoi on multiplie avec l'astérisque: `5 * 5`, qui se lit "5 fois 5".
+
         ## Exemple de code Hedy
         ```
-        repeat 3 times print 'Hedy est amusant!'
+        affiche '5 plus 5 est ' 5 + 5
+        affiche '5 moins 5 est ' 5 - 5
+        affiche '5 fois 5 est ' 5 * 5
+        ```
+
+        On change aussi le stockâge (ou l'assignation)! Tu peux à présent utiliser `=` au lieu de `est` quand tu stocke un nombre ou un nom:
+
+        ```
+        nom = Hedy
+        réponse = 20 + 4
+        ```
+
+    commands:
+    -   name: "affiche"
+        explanation: "Affiche exactement en utilisant les guillemets"
+        example: "Exemple: affiche '5 fois 5 est ' 5 * 5"
+        demo_code: "affiche '5 fois 5 est ' 5 * 5"
+    -   name: "demande"
+        explanation: "Demande ce que vaut un calcul et vérifie s'il est correct."
+        example: "Exemple: réponse est demande 'Que vaut 10 plus 10?'"
+        demo_code: |-
+            réponse = demande 'Que vaut 10 plus 10?'
+            si réponse est 20 affiche 'Oui!' sinon affiche 'Oups'
+    -   name: "`demande` et `si` tortue"
+        explanation: "Demande à l'utilisateur-trice combien d'angles il veut"
+        example: "Exemple: angles est demande 'Combien d'angles?'"
+        demo_code: |-
+            angles = demande 'Combient d'angles?'
+            angle = 360 / angles
+            avance 50
+7:
+    start_code: "répète 3 fois affiche 'Hedy est fun!'"
+    intro_text: |
+        `demande`, `affiche` et `si` marchent exactement comme aux niveaux 5 et 6.
+        Mais le niveau 7 ajoute la commande `répète`. Répète peut être utilisée pour exécuter plusieurs fois une ligne de programme.
+
+        ## Exemple de code Hedy
+
+        ```
+        répète 3 fois affiche 'Hedy est fun!'
         ```
     commands:
-    -   name: "print"
-        explanation: "Affiche exactement ce qui est entre les guilllemets"
-        example: "Exemple: print 'Bonjour et bienvenue à Hedy.'"
-        demo_code: "print 'Bonjour et bienvenue à Hedy.'"
-    -   name: "ask"
-        explanation: "Demande quelque chose avec `ask`."
-        example: "Exemple: couleur = ask 'Quelle est ta couleur préférée?'"
+    -   name: "affiche"
+        explanation: "Affiche exactement en utilisant les guillemets"
+        example: "Exemple: affiche 'Bonjour bienvenu-e à Hedy.'"
+        demo_code: "affiche 'Bonjour bienvenu-e à Hedy.'"
+    -   name: "demande"
+        explanation: "Demande quelque chose avec `demande`."
+        example: "Exemple: couleur = demande 'Quelle est ta couleur préférée?'"
         demo_code: |-
-            couleur = ask 'Quelle est ta couleur préférée?'
-            print couleur ' est ta couleur préférée!'
-    -   name: "if"
-        explanation: "Fait un choix avec `if`."
-        example: "Exemple: if couleur is vert print 'joli!' else print 'bof'"
+            couleur = demande 'Quelle est ta couleur préférée?'
+            affiche couleur ' est ta préférée!'
+    -   name: "si"
+        explanation: "Fais un choix avec `si`"
+        example: "Exemple: si couleur est vert affiche 'joli!' sinon affiche 'bof'"
         demo_code: |-
-            couleur = ask 'Quelle est ta couleur préférée?'
-            if couleur is vert print 'joli!' else print 'bof'
-    -   name: "repeat - turtle"
-        explanation: "Repeat a line of code with `repeat`."
-        example: "Example: repeat 3 times forward 10"
+            couleur = demande 'Quelle est ta couleur préférée?'
+            si couleur est vert affiche 'joli!' sinon affiche 'bof'
+    -   name: "répète - tortue"
+        explanation: "Repeat a line of code avec `répète`."
+        example: "Exemple: répète 3 fois avance 10"
         demo_code: |-
-            repeat 3 times forward 10
+            répète 3 fois avance 10
 8:
     start_code: |-
-        repeat 5 times
-            print 'Bonjour les amis'
-            print 'Ceci sera affiché 5 fois'
+        répète 5 fois
+            affiche 'Bonjour tout le monde'
+            affiche 'Cela s'affichera 5 fois'
     intro_text: |
-        `ask` et `print` fonctionnent comme tu y es habitué. Mais `if` et `repeat` ont changé!
-        Tu peux maintenant exécuter des groupes de commandes ensemble, mais tu dois indenter ces commandes.
-        Cela veut dire que tu dois mettre 4 espaces au début des lignes.
-        Cela fonctionne aussi si tu veux créer un bloc d’une seule ligne.
+        `demande` et `affiche` marchent toujours comme d'habitude. Mais `si` et `répète` ont changé!
+        Tu peux maintenant exécuter un bout de code ensemble, mais tu vas de voir *indenter* le code.
+        Cela signifie mettre quatre espaces au début de la ligne. Tu vas aussi devoir indenter quand tu veux créer un nouveau bloc ou une nouvelle ligne.
 
         ## Exemple de code Hedy
+        
         ```
-        repeat 5 times
-            print 'Bonjour les amis'
-            print 'Ceci sera affiché 5 fois'
+        répète 5 fois
+            affiche 'Bonjour tout le monde'
+            affiche 'Ceci est répété 5 fois'
         ```
-
     commands:
-    -   name: "print"
-        explanation: "Affiche quelque chose. N’oublies pas les guillemets pour afficher exactement ce qui est saisi."
-        example: "Exemple: print '5 fois 5 font ' 5 * 5"
-        demo_code: "print '5 fois 5 font ' 5 * 5"
-    -   name: "`if` sur plusieurs lignes"
-        explanation: "Demande la réponse d’une addition et vérifie si elle est correcte. Tu peux désormais imprimer sur 2 lignes."
-        example: "Exemple: reponse = ask 'Combien font 5 plus 5?'"
+    -   name: "affiche"
+        explanation: "Affiche quelque chose. Souviens-toi d'utiliser les guillemets pour l'affichâge."
+        example: "Exemple: affiche '5 fois 5 est ' 5 * 5"
+        demo_code: "affiche '5 fois 5 est ' 5 * 5"
+    -   name: "demande"
+        explanation: "Demande à l'utilisateur-trice ce que vaut une somme et vérifie si le résultat est correct. On peut maintenant afficher deux lignes."
+        example: "Exemple: réponse est demande 'Que vaut 5 plus 5?'"
         demo_code: |-
-            reponse = ask 'Combien font 5 plus 5?'
-            if reponse is 10
-                print 'Bien joué!'
-                print 'En effet, la réponse est ' reponse
-            else
-                print 'Oups!'
-                print 'La réponse devrait être 10.'
+            réponse = demande 'Que vaut 5 plus 5?'
+            si réponse est 10
+                affiche 'Bien joué!'
+                affiche 'En effet la bonne réponse est ' réponse
+            sinon
+                affiche 'Oops!'
+                affiche 'La bonne réponse est 10'
+    -   name: "`répète` avec tortue"
+        explanation: "Répète plusieurs lignes"
+        example: "Exemple: dessine un carré"
+        demo_code: |-
+            répète 4 fois
+                tourne 90
+                avance 50
 9:
     start_code: |-
-        repeat 3 times
-            food = ask 'What do you want?'
-            if food is 'pizza'
-                print 'nice!'
-            else
-                print 'pizza is better'
+        répète 3 fois
+            nourriture = demande 'Qu'est-ce que tu veux manger?'
+            si nourriture est 'pizza'
+                affiche 'Joli!'
+            sinon
+                affiche 'La pizza c'est meilleur.'
     intro_text: |
-        In this level you can not only use multiple lines with `if` and `repeat`, but you can also put them together!
-        In the example you see an `if` command within a `repeat` command. It is also allowed the other way around, and an `if` is also allowed in an `if` and a `repeat` in a `repeat`.
-        Give it a try!
+        Dans niveau tu peux non seulement utiliser plusieurs lignes avec `si` et `répète`, mais tu peux aussi les mettre ensemble!
+        Dans cet exemple tu vois la commande `si` qui se trouve à l'intérieur de la commande `répète`. L'inverse est également possible, et un `si` est également s'imbriquer dans un `si` et un `répète` dans un `répète`.
+        Essaie!
 
-        ## Example Hedy code
+        ## Exemple de code Hedy
+
         ```
-        repeat 3 times
-            food = ask 'What do you want?'
-            if food is 'pizza'
-                print 'nice!'
-            else
-                print 'pizza is better'
+        répète 3 fois
+            nourriture = demande 'Qu'est-ce que tu veux manger?'
+            si nourriture est 'pizza'
+                affiche 'Joli!'
+            sinon
+                affiche 'La pizza c'est meilleur.'
         ```
 
     commands:
-    -   name: "`if` with multiple lines"
-        explanation: "The answer of a sum of questions with 'ask' and see if it is correct. Now we print out two lines."
-        example: "Example: answer = ask 'What is 20 plus 20?'"
+    -   name: "`si` avec plusieurs lignes"
+        explanation: "Demande ce que vaut une somme avec 'demande' et détermine si cela est correct. Cette fois nous afficherons la réponse sur deux lignes."
+        example: "Exemple: réponse = demande 'Que caut 20 plus 20?'"
         demo_code: |-
-            answer = ask 'What is 20 plus 20?'
-            if answer is 20
-                print 'Well done!!'
-                print 'The answer is indeed' answer
-            else
-                print 'Wrong'
-                print 'The answer is 20'
-    -   name: "`repeat` and turtle"
-        explanation: "Repeat multiple lines"
-        example: "Example: create a square"
+            réponse = demande 'Que caut 20 plus 20?'
+            si réponse est 20
+                affiche 'Bien joué!!'
+                affiche 'La réponse est en effet ' réponse
+            sinon
+                affiche 'Faux'
+                affiche 'La réponse est 20'
+    -   name: "`répète` et tortue"
+        explanation: "Répète plusieurs lignes"
+        example: "Exemple: crée un carré"
         demo_code: |-
-            repeat 4 times
-                turn 90
-                forward 50
+            répète 4 fois
+                tourne 90
+                avance 50
 10:
     start_code: |-
-        animals is dog, cat, blobfish
-        for animal in animals
-          print 'I love ' animal
+        animaux est chien, chat, blobfish
+        pour animal dans animaux
+          affiche 'J'aime ' animal
     intro_text: |
-        In this level we learn a new code called `for`. With `for` you can make a list and use all elements.
-        `for` creates a block, like `repeat` and `if` so all lines in the block need to start with spaces.
+        Dans ce niveau nous apprenons une nouvelle commande qui s'appelle `pour`. Avec `pour` tu peux faire une liste et utiliser tous ses éléments.
+        `pour` crée un bloc, comme `répète` et `si` donc toutes les lignes du bloc doivent commencer avec des espaces.
 
-        ## Example Hedy code
+        ## Exemple de code Hedy
+
         ```
-        animals is dog, cat, blobfish
-        for animal in animals
-          print 'I love ' animal
+        animaux est chien, chat, blobfish
+        pour animal dans animaux
+          affiche 'J'aime ' animal
         ```
     commands:
-    -   name: "print"
-        explanation: "Print something. Remember to use a quotation mark for literal printing."
-        example: "Example: print '5 times 5 is ' 5 * 5"
-        demo_code: "print '5 times 5 is ' 5 * 5"
-    -   name: "for with a list"
-        explanation: "print all things in a list "
-        example: "Example: for dier in dieren"
+    -   name: "affiche"
+        explanation: "Affiche quelque chose. Rappelle-toi d'utiliser les guillemets."
+        example: "Exemple: affiche '5 fois 5 est ' 5 * 5"
+        demo_code: "affiche '5 fois 5 est ' 5 * 5"
+    -   name: "pour avec une liste"
+        explanation: "affiche tous les éléments d'une liste"
+        example: "Exemple: pour animal dans animaux"
         demo_code: |-
-            animals is dog, cat, blobfish
-            for animal in animals
-              print 'I love ' animal
+            animaux est chien, chat, blobfish
+            pour animal dans animaux
+              affiche 'J'aime ' animal
 11:
     start_code: |-
-        for i in range 1 to 11
-            print i
-        print ' Cache toi ou je te verrai !'
-    intro_text: "`print` fonctionne encore comme avant, mais `repeat` est changé ! Tu tape maintenant `for i in range 1 to 5`, au lieu de `repeat 5 times`. La bonne chose est que tu peux également utiliser cette variable i dans ton programme! Tu dois encore toujours mettre en retrait toutes les lignes répétitives (cela signifie qu'elles doivent commencer par quatre espaces)"
+        pour compteur dans intervalle 1 à 5
+            affiche compteur
+    intro_text: "`affiche` marche comme avant, mais on ajoute une nouvelle forme du `pour`. Tu peux à présent écrire `pour compteur dans intervalle 1 à 5` et utilise `compteur` dans ton programme. Essaie et regarde ce qu'il se passe! Souviens toi d'utiliser l'indentation pour les `pour` et `si`, (Cela signifie qu'il faut commencer les lignes avec des espaces)."
     commands:
-    -   name: " nouveau `repeat`"
-        explanation: " `for` au lieu de `repeat`"
-        example: "for i in range 1 to 11"
+    -   name: "boucle pour"
+        explanation: "Nous pouvons utiliser `pour` avec un intervalle"
+        example: "pour compteur dans intervalle 1 à 5"
+        demo_code: |-
+            pour compteur dans intervalle 1 à 5
+                affiche compteur
+    -   name: "demande"
+        explanation: "Demande ce que vaut une somme et vérifie si le résultat est correct. On peut à présent afficher sur deux lignes."
+        example: "Exemple: réponse = demande 'Que vaut 5 plus 5?'"
+        demo_code: |-
+            réponse = demande 'Que vaut 5 plus 5?'
+            si réponse est 10
+                affiche 'Bien joué!'
+                affiche 'En effet, la réponse était ' réponse
+            sinon
+                affiche 'Oups!'
+                affiche 'La réponse est 10.'
+12:
+    start_code: |-
+        affiche 'Les nombres décimaux peuvent avoir une virgule, et on utilise un point, `.`'
+        affiche 2.5 + 2.5
+    intro_text: |
+        ## Nombres décimaux
+
+        Jusqu'ici, Hedy ne permettait pas l'utilisation de nombres à virgules comme 1.5, cela n'est plus le cas. Note que les ordinateurs utilisent le `.` pour représenter la virgule.
+        ```
+        affiche 'Deux et demi plus deux et demi donne...'
+        affiche 2.5 + 2.5
+        ```
+
+        ## Tout texte doit être entre guillemets `''`
+
+        Pour ce niveau tu devras utiliser les guillemets quand tu stockes du texte avec `=`:
+
+        ```
+        nom = 'Hedy le Robot'
+        affiche 'Bonjour ' nom
+        ```
+
+        ## Tous les éléments d'une liste ont besoin de guillemets aussi
+
+        Les listes sont des textes, donc ils ont besoin de guillemets également. Note que chaque élément dans la liste a besoin des guillemets.
+        Cela permet de sauver deux mots dans une liste comme étant un seul élément, par exemple 'Iron Man'.
+
+        ```
+        super_héros = 'Spiderman', 'Batman', 'Iron Man'
+        affiche super_héros au hasard
+        ```
+
+        ## Tout texte après un une comparaison dans un `si` a besoin de guillemets
+
+        ```
+        nom = demande 'Quel est ton nom?'
+        si nom = 'Hedy le Robot'
+            affiche 'Salut!'
+        ```
+
+        ## Les nombres n'ont pas besoin de guillemets
+
+        Pour les nombres, il n'y a pas besoin d'utiliser les guillemets pour le `=`:
+
+        ```
+        score = 25
+        affiche 'Tu as ' score
+        ```
+    commands:
+    -   name: "nombre à virgule directement"
+        explanation: "Nombres à virgule"
+        example: "affiche 2.5 + 2.5"
         demo_code: |
-            for i in range 1 to 11
-                print i
-            print ' Cache toi ou je te verrai !'
+            affiche 'Calcule!'
+            affiche 'Deux et demi plus deux et demi est...'
+            affiche 2.5 + 2.5
+    -   name: "assigne du texte"
+        explanation: "Texte avec des guillemets après un `=`"
+        example: "nom = 'Hedy'"
+        demo_code: |
+            nom = 'Hedy le Robot'
+            affiche 'Bonjour ' nom
+    -   name: "guillemets après une comparaison dans un `si`"
+        explanation: "Texte avec guillemets après un `si`"
+        example: "nom = 'Hedy'"
+        demo_code: |
+            nom = demande 'Qui es-tu?'
+            si nom = 'Hedy'
+                affiche 'Salut!'
+    -   name: "guillemets dans une liste"
+        explanation: "Une liste avec des guillemets"
+        example: "nom = 'Hedy', 'Felienne'"
+        demo_code: |
+            super_héros = 'Iron Man', 'Batman', 'Superman'
+            affiche super_héros au hasard
+
+13:
+    start_code: |-
+        nom = demande 'Quel est ton nom?'
+        âge = demande 'Quel est ton âge?'
+        si nom est 'Hedy' et âge est 2
+            affiche 'Tu es le vrai Hedy!'
+    intro_text: "Nous allons apprendre `et` et `ou`! Si tu veux vérifier deux conditions tu n'as pas besoin d'utiliser deux `si`, mais plutôt `et` et `ou`. Si tu utilise `et`, les deux conditions, à gauche et à droite du `et` doivent être vraies. On peut aussi utiliser `ou`. Dans ce cas uniquement une des conditions doit être vérifiée."
+    commands:
+    -   name: "Et"
+        explanation: "Les deux parties doivent être correcte"
+        example: "si 3+2 est 5 et 2+2 est 4"
+        demo_code: |-
+            réponse1 = demande 'Combien vaut 3+2?'
+            réponse2 = demande 'Combien vaut 2+2?'
+            si réponse1 est 5 et réponse2 est 4
+                affiche 'Les deux réponses sont correctes!'
+            sinon
+                affiche 'Au moins une des réponses est fausse!'
+    -   name: "Ou"
+        explanation: "Au moins une des deux parties doivent être correctes. Si les deux sont correctes cela marche également."
+        example: "si 3+2 est 5 ou 2+2 est 4"
+        demo_code: |-
+            réponse1 = demande 'Combien vaut 3+2?'
+            réponse2 = demande 'Combien vaut 2+2?'
+            si réponse1 est 5 ou réponse2 est 4
+                affiche 'Au moins une réponse est correct!'
+            sinon
+                affiche 'Les deux réponses sont fausses!'
+14:
+    start_code: |-
+        âge = demande 'Quel âge as-tu?'
+        si âge < 13
+            affiche 'Tu es plus jeune que moi!'
+        sinon
+            affiche 'Tu es plus âgé-e que moi!'
+    intro_text: |
+        Nous allons apprendre quelques nouveaux symboles. Tu connais peut-être déjà les symboles mathématiques, `<` et `>`.
+        Le `<` vérifie si le premier nombre est plus petit que le second. Par exemple `âge < 12` vérifie si `âge` est plus petit que 12.
+        Si tu veux vérifier si le premier nombre est plus petit ou égal au second, tu peux utiliser `<=`. Par exemple `âge <= 11` vérifie si âge est plus petit ou égal à 11.
+        Le `>` vérifie si le premier nombre est plus grand que le second. Par exemple `points > 10` vérifie si `points` est plus grand que 10.
+        Si tu veux vérifier si le premier nombre est plus grand ou égal au second, tu peux utiliser `>=`. Par exemple `points >= 11` vérifie si points est plus grand ou égal à 11.
+        Utilise ces comparaisons dans un `si`:
+
+        ```
+        âge = demande 'Quel âge as-tu?'
+        si âge > 12
+            affiche 'Tu es plus âgé-e que moi!'
+        ```
+
+        À partir  de ce niveau, si tu veux comparer exactement, tu peux utiliser deux signes égal, `==`. C'est la notation utilisée par la plupart des langages de programmation:
+        ```
+        nom = demande 'Quel est ton nom?'
+        si nom == 'Hedy'
+            affiche 'Tu es cool!'
+        ```
+
+        Tu peux aussi comparer si quelque chose *n'est pas* égal à quelque en utilisant `!=`:
+        ```
+        nom = demande 'Quel est ton nom?'
+        si nom != 'Hedy'
+            affiche 'Tu n'es pas Hedy'
+        ```
+
+    commands:
+    -   name: "Plus petit que"
+        explanation: "Nous utilisons `<` pour vérifier si le premier nombre est plus petit que le second."
+        example: "Par exemple: âge < 12"
+        demo_code: |-
+            âge = demande 'Quel âge as-tu?'
+            si âge < 13
+                affiche 'Tu es plus jeune que moi!'
+    -   name: "Plus grand que"
+        explanation: "Nous utilisons `>` pour vérifier si le premier nombre est plus grand que le second."
+        example: "Par exemple: âge > 12"
+        demo_code: |-
+            âge = demande 'Quel âge as-tu?'
+            si âge > 13
+                affiche 'Tu es plus âgé-e que moi!'
+    -   name: "Égal"
+        explanation: "On utilise `==` pour vérifier si deux choses sont les mêmes."
+        example: "Par exemple: réponse == 25"
+        demo_code: |-
+            réponse = demande 'Combien vaut 5 * 5?'
+            si réponse == 25
+                affiche 'C'est correct!'
+    -   name: "Pas égal"
+        explanation: "Nous utilisons `!=` pour vérifier si deux choses sont différentes."
+        example: "Par exemple: réponse != 25"
+        demo_code: |-
+            réponse = demande 'Combien vaut 5 * 5?'
+            si réponse != 25
+                affiche 'Cela n'est pas correct!'
+
+    -   name: "Plus petit ou égal"
+        explanation: "Nous utilisons `<=` pour vérifier si le premier nombre est plus petit ou égal au second."
+        example: "Par exemple: âge <= 12"
+        demo_code: |-
+            âge = demande 'Quel âge as-tu?'
+            si âge <= 12
+                affiche 'Tu es plus jeune que moi!'
+
+    -   name: "Plus grand que ou equal"
+        explanation: "Nous utilisons `>=` pour vérifier si le premier nombre est plus grand ou égal au second."
+        example: "Par exemple: âge >= 14"
+        demo_code: |-
+            âge = demande 'Quel âge as-tu?'
+            si âge >= 14
+                affiche 'Tu es plus âgé-e que moi!'
+
+15:
+    start_code: |-
+        réponse = 0
+        tant_que réponse != 25
+            réponse = demande 'Combien vaut 5 fois 5?'
+        affiche 'Une réponse correcte doit être donnée!'
+    intro_text: |
+        Nous allons apprendre une nouvelle boucle: la boucle `tant_que`! Nous répétons la boucle aussi longtemps
+        que la condition être vraie. N'oublie donc pas de changer la valeur de la condition dans la boucle.
+
+        Dans le code de l'exemple on continue jusqu'à ce que la bonne réponse soit donnée.
+        Si la bonne réponse n'est jamais donnée, la boucle ne s'arrête pas!
+    commands:
+    -   name: "tant_que"
+        explanation: "Nous pouvons utiliser la boucle `tant_que` avec pas égal."
+        example: "Exemple: tant_que réponse_correcte != 25"
+        demo_code: |-
+            réponse = 0
+            tant_que réponse != 25
+                réponse = demande 'Combien vaut 5 fois 5?'
+            affiche 'Une bonne réponse a été donnée.'
+    -   name: "Plus petit que tant_que"
+        explanation: "Nous pouvons utiliser la boucle `tant_que` avec `<` et `>`. "
+        example: "Par exemple: tant_que compte < 3"
+        demo_code: |-
+            compte = 1
+            tant_que compte < 3
+                affiche 'Nous faisons cela encore ' 3 - compte ' plus de fois'
+                compte = compte + 1
+            affiche 'C'est fini.'
+
+16:
+    start_code: |-
+        fruit = ['pomme', 'banane', 'cerise']
+        affiche fruit 
+    intro_text: |
+        Nous allons faire les listes comme en Python (Python est un langage de programmation très utilisé) avec des crochets autour des listes!
+        Nous gardons les guillemets autour de chaque élément comme nous avons appris dans les niveaux précédents.
+        Tu peux utiliser les crochets pour indiquer un endroit dans les listes.
+
+        ```
+        amis = ['Ahmed', 'Ben', 'Cayden']
+        nombres_porte_bonheur = [15, 18, 6]
+        pour i dans intervalle 1 à 3
+            affiche 'Le nombre porte bonheur de ' amis[i]
+            affiche 'est ' nombres_porte_bonheur[i]
+        ```
+    commands:
+    -   name: "crochets"
+        explanation: "Listes avec crochets"
+        example: "Par exemple: fruits = ['pomme', 'banane', 'cerise']"
+        demo_code: |-
+            fruits = ['pomme', 'banane', 'cerise']
+            affiche fruits
+    -   name: "Récupère un élément de la liste"
+        explanation: "Pour récupérer un élément de la liste on utilise [nombre]. Ainsi fruits[1] veut récupère le premier fruit de la liste!"
+        example: "Par exemple: premier_fruit = fruits[1]"
+        demo_code: |-
+            fruit = ['banane', 'pomme', 'cerise']
+            premier_fruit = fruits[1]
+            affiche premier_fruit
+    -   name: "Récupère un élément au hasard de la liste"
+        explanation: "Pour récupérer un élément au hasard de la liste on utilise [hasard]. Ainsi fruits[hasard] veut dire, récupère un fruit au hasard de la liste!"
+        example: "Par exemple: fruit_au_hasard est fruits[hasard]"
+        demo_code: |-
+            fruits = ['banane', 'pomme', 'cerise']
+            fruit_au_hasard = fruits[hasard]
+            affiche fruit_au_hasard
+
+
+#16:
+#    start_code: |-
+#        # Ceci est un programme qui pose quelques questions mathématiques
+#        pour i dans intervalle(1, 10):
+#            # On demande la table de multiplication de 5
+#            réponse est saisie('Combien vaut ' i ' fois 5?')
+#            # On vérifie sir la réponse est la même que notre somme
+#            réponse_correcte est i * 5
+#            si réponse est réponse_correcte:
+#                affiche(réponse ' est correct.')
+#            sinon:
+#                affiche('C'est faux, cela doit donner: ' i*5)
+#    intro_text: |-
+#        Quand tu fais des programmes plus longs, tu devras trouver un moyen de te souvenir ce que fait chaque partie du code. Pour ce faire, on utilise des commentaires.
+#        Un commentaire est de la forme suivante:
+#         ` # Ceci est un commentaire`. Tout ce qui se trouve après un # sera invisible pour le code.
+#    commands:
+#    -   name: "Commentaire"
+#        explanation: "On peut placer des commentaires où on veut."
+#        example: "# Ceci est un commentaire"
+#        demo_code: |-
+#            # Ce programme affiche Bonjour!
+#            # Il a été fait dans Hedy
+#            # Il ne fait rien à part afficher Bonjour!
+#            affiche('Bonjour!')
+#20:
+#    start_code: |-
+#        fruits = ['pomme', 'banane', 'cerise']
+#        pour i dans intervalle(1, 3):
+#            affiche(fruits[i])
+#    intro_text: "Nous pouvons aussi voir tous les éléments dans une liste avec une boucle `pour`. Comme il y a trois éléments dans la liste, nous faisons aller la boucle de 1 à 3. Puis ont affiche à chaque tour de boucle."
+#    commands:
+#    -   name: "Longueur de la liste"
+#        explanation: "Avec `longueur` on peut connaître la longueur d'une liste. La longueur de la liste dans cet exemple est de 3, car il y a trois éléments dans la liste."
+#        example: "longueur(list)"
+#        demo_code: |-
+#            fruits = ['pomme', 'banane', 'cerise']
+#            affiche('La longueur de la liste est ' longueur(fruits))
+#            pour i dans intervalle(1, longueur(fruits)):
+#                affiche(fruits[i])
+#21:
+#    start_code: |-
+#        affiche('Combien vaut 5+3?')
+#        réponse = 5+3
+#        affiche('La réponse est:')
+#        affiche(réponse)
+#        si réponse == 8:
+#            affiche('C'est correct!')
+#        sinon:
+#            affiche('Oh non, c'est faux!')
+#    intro_text: "À présent nous allons changer `est` en `=` et `==`. On utilise `=` si on veut assigner une valeur à une variable. Si on veut assigner 8 à la variable nommée réponse, on fait réponse = 8. `==` est utilisée quand on veut vérifier si deux choses sont les mêmes."
+#    commands:
+#    -   name: "Comparer"
+#        explanation: "Si on veut comparer, on utilise `==`. 5+3 == 8 vérifie si 5+3 est égal à 8."
+#        example: "Par exemple: 5+3 == 8"
+#        demo_code: |-
+#            si 5+3 == 8:
+#                affiche('5+3 vaut effectivement 8')
+#            sinon:
+#                affiche('Cela ne sera pas affiché car 5+3 vaut 8!')
+#    -   name: "Assigner une valeur"
+#        explanation: "Si on veut assigner une valeur à une variable nommée réponse à 8, on fait réponse = 8."
+#        example: "Par exemple: réponse = 8"
+#        demo_code: |-
+#            affiche('Combien vaut 5+3?')
+#            réponse = 5+3
+#            affiche('réponse est à présent:')
+#            affiche(réponse)
+#    -   name: "Comparer et assigner une valeur"
+#        explanation: "Si on veut comparer deux valeurs, on utilise `==`. Si on vet assigner une valeur à une variable, on utilise `=`. "
+#        example: "Par exemple: 5+3 == 8, réponse = 8"
+#        demo_code: |-
+#            affiche('Combien vaut 5+3?')
+#            réponse = 5+3
+#            affiche('réponse est à présent:')
+#            affiche(réponse)
+#            si réponse == 8:
+#                affiche('C'est correct!')
+#            sinon:
+#                affiche('Nom, c'est faux!')
 17:
     start_code: |-
-        for i in range 1 to 10:
-            print i
-        print 'Cache toi ou je te verrai !'
-    intro_text: "Maintenant on change encore un petit chose concernant l'indentation. Chaque fois que nous indentons, il faut ajouter un `:` à la fin du règle précédente."
+        pour i dans intervalle 1 à 10:
+            affiche i
+        affiche 'Prêt ou pas, j'arrive!'
+    intro_text: |
+        Maintenant nous allons changer un peu les règles de l'indentation. Chaque fois que nous avons une identation, nous aurons besoin d'un `:` à la fin de la ligne avant l'indentation.
+
+        Dans ce niveau tu peux aussi utiliser la commande: `sinon_si`. `sinon_si` si tu veux un `si` avec 3 (ou plus!) options.
+        Essaie!
+        ```
+        prix = ['1 million de dollars', 'une tarte aux pommes', 'rien']
+        ton_prix = prices[hasard]
+        affiche 'Tu gagnes ' ton_prix
+        si ton_prix == '1 million de dollars' :
+            affiche 'Super! Tu es riche'
+        sinon_si ton_prix == 'une tarte aux pommes' :
+            affiche 'Chouette, une tarte aux pommes!'
+        sinon:
+            affiche 'Tu auras plus de chance la prochaine fois...'
+        ```
+
     commands:
-    -   name: "`for` avec `:`"
-        explanation: "Utilisant un `for` sur plusieurs lignes, il te faut un `:` à la fin"
-        example: "for i in range 1 to 10:"
-        demo_code: |-
-            for i in range 1 to 10:
-                print i
-            print ' Cache toi ou je te verrai !.'
-    -   name: "`if` avec `:`"
-        explanation: "Nous faisons de la même manière avec tous nos commandes `if`."
-        example: "if couleur is vert:"
-        demo_code: |-
-            couleur = ask 'Quelle couleur préfères-tu ?'
-            if couleur is vert:
-                print 'Tu as choisi le vert.'
-            else:
-                print 'Tu as choisi un autre couleur que le vert.'
-    -   name: "(Optionnel) `elif`"
-        explanation: "Pour compléter il-y-a encore un nouveau commande quelle tu peux utiliser: `elif`. `Elif` signifie `else if`. Tu regardes alors auparavant à `if` et quand ça n'est pas vrai, tu avances à `elif`. Quand ça n'est pas vrai aussi, tu avances à `else`."
-        example: "elif a is 5"
+    -   name: "sinon_si"
+        explanation: "`sinon_si`."
+        example: "sinon_si a est 5:"
         demo_code: |-
             a = 2
-            if a is 1:
-                print 'a est égal à 1'
-            elif a is 2:
-                print 'a est égal à 2'
-            else:
-                print 'a est ni 1 ni 2'
-
+            si a == 1:
+                affiche 'a est 1'
+            sinon_si a == 2:
+                affiche 'a est 2'
+            sinon:
+                affiche 'a est ni 1 ni 2'
+    -   name: "affiche"
+        explanation: "Quand on utilise `pour`, nous avons besoin de mettre un `:` à la fin de la ligne du `pour`!"
+        example: "pour i dans intervalle 1 à 10:"
+        demo_code: |-
+            pour i dans intervalle 1 à 12:
+                affiche i
+            affiche 'Prêt ou pas j'arrive!'
+    -   name: "si"
+        explanation: "Nous devons faire pareil avec tous nos `si`"
+        example: "si couleur est vert:'"
+        demo_code: |-
+            couleur = demande 'Quelle est ta couleur préférée?'
+            si couleur == vert:
+                affiche 'Ta couleur préférée est le vert'
+            sinon:
+                affiche 'Ta couleur préférée est pas le vert'
 
