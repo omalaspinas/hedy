@@ -1,0 +1,2709 @@
+title: "Les aventures d'Hedy!"
+subtitle: "Tu peux apprendre Hedy en créant une histoire, un jeu, ou une application pour rendre ta vie plus simple."
+adventures:
+    story:
+        name: "Histoire"
+        description: "Histoire"
+        image: "story.png"
+        default_save_name: "Histoire"
+        levels:
+            1:
+                story_text: |
+                    ## Crée une histoire
+
+                    Au niveau 1 tu peux créer une histoire avec une personnage principal que tu saisis toi-même.
+
+                    A la première ligne, utilise ce code:
+
+                    ```
+                    demande Qui est la starde ton histoire?
+                    ```
+
+                    Après cette première ligne, commence avec `affiche` si la phrase a besoin d'être affichée.
+                    Utilise `dit` si tu veux que ton personnage principal soit à la fin de la phrase.
+
+                example_code: |
+                    ## Exemple de code Hedy
+
+
+                    ```
+                    demande Le personnage principal de cette histoire est
+                    affiche Le personnage principal va marcher dans la forêt
+                    dit Iel est un peu effrayé-e,
+                    affiche Iel entend des bruit bizarres venant de partout
+                    affiche Iel a peur d'être dans une forêt hantée
+                    ```
+
+                start_code: "affiche Ton histoire commence ici"
+            2:
+                story_text: |
+                    ## Histoire
+
+                    Au niveau 2, vous pouvez rendre votre histoire plus amusante. Le nom de votre personnage principal peut maintenant être placé n'importe où dans la phrase.
+
+                    Vous devez programmer un peu plus pour cela. Vous devez maintenant commencer par nommer votre personnage principal.
+
+                    Vous pouvez ensuite placer ce nom n'importe où dans la phrase.
+                example_code: |
+                    ## Exemple de code Hedy
+
+
+                    ```
+                    nom est demande Quel est le nom du personnage principal ?
+                    affiche nom va maintenant courir dans les bois
+                    affiche nom est un peu effrayé
+                    affiche nom entend soudain un bruit bizarre...
+                    dors
+                    affiche nom a peur que ce soit une forêt hantée
+                    ```
+                start_code: "affiche Ton histoire"
+            12:
+                story_text: |
+                    ## Histoire
+
+                    Dans ce niveau, vous pouvez utiliser les guillemets pour enregistrer plusieurs mots dans une variable.
+
+                example_code: |
+                    ## Exemple de code Hedy
+
+
+                    ```
+                    nom = 'La reine d Angleterre'
+                    affiche nom ' mangeait un morceau de gâteau, quand soudain...'
+                    ```
+                start_code: ""
+            10:
+                story_text: |
+                    ## Histoire
+
+                    Dans ce niveau, vous pouvez utiliser la commande pour dans votre histoire. Ainsi, vous pouvez facilement programmer le livre pour enfants "Ours brun, ours brun, dis-moi ce que tu vois?".
+
+                example_code: |
+                    ## Exemple de code Hedy
+
+                    ```
+                    animaux = oiseau rouge, mouton noir, grenouille verte, canard jaune, petit enfant
+                    affiche 'ours brun'
+                    affiche 'ours brun'
+                    affiche 'Qu'est-ce que tu vois?'
+                    pour animal dans animaux
+                        affiche 'Je vois un ' animal ' qui me regarde'
+                        affiche animal
+                        affiche animal
+                        affiche 'Qu'est-ce que tu vois?'
+                    affiche 'Je vois des animcaux qui me regardent!'
+                    ```
+                start_code: ""
+            9:
+                story_text: |
+                    ## Histoire
+                    
+                    À ce niveau, vous pouvez utiliser l'imbrication pour placer les `si`, `répète` ou `pour` à l'intérieur d'autres `if`, `répète` ou `pour`. Cela vous donne de nombreuses options et vous aide vraiment à rendre votre histoire interactive.
+
+                    ## Exemple de code Hedy simple
+
+                    ```
+                    affiche 'Robin se promène en ville.'
+                    emplacement = demande 'Est-ce que Robin entre dans un magasin, ou est-ce qu'elle rentre chez elle ?'
+                    si emplacement est magasin
+                        affiche 'Elle entre dans le magasin.'
+                        affiche 'Robin voit un livre intéressant.'
+                        livre = demande 'Est-ce que Robin achète le livre ?'
+                        si livre est oui
+                            affiche 'Robin achète le livre et rentre chez elle.'
+                        sinon
+                            affiche 'Robin quitte le magasin et rentre à la maison.'
+                    sinon
+                        affiche 'Robin rentre à la maison.'
+                    ```
+
+                    ## Plus élaboré
+                    
+                    L'exemple ci-dessus est assez simple, mais avec l'imbrication, tu peux vraiment élaborer ton code et transformer ton histoire en un véritable jeu. Regarde cet exemple !
+
+                    ## Code élaboré
+
+                    ```
+                    épée = perdue
+                    jeu = activé
+                    affiche 'Notre héroïne marche dans la forêt.'
+                    affiche 'Le chemin se sépare en deux.'
+                    répéter 2 fois
+                        si jeu est activé
+                            chemin = demande 'Quel chemin doit-elle choisir (gauche ou droite)?'
+                            si chemin est gauche
+                                si épée est trouvée
+                                    affiche 'Notre héroîne rencontre un dragon !'
+                                    affiche 'Heureusement, notre héroïne a une épée pour vaincre la bête !'
+                                    jeu = fini
+                                sinon
+                                    affiche 'Notre héroïne trouve un dragon, mais elle n'a pas d'armes !'
+                                    affiche 'Notre héroïne est battue par le dragon....'
+                                    affiche 'Réessayez.'
+                                    jeu = terminé
+                            si chemin est droite
+                                si épée est perdue
+                                    affiche 'Notre héroïne trouve une épée.'
+                                    affiche 'Cela pourrait s'avérer très utile.'
+                                    épée = trouvée
+                                sinon
+                                    affiche 'Tu as déjà trouvé l'épée. Il n'y a plus rien ici.
+                                    affiche 'Elle rebrousse chemin.'
+                    ```
+                start_code: ""
+                # TODO: continuer depuis ici
+            8:
+                story_text: |
+                    ## Histoire
+
+                    In this level you can use multiple lines in your if commands, this way you can upgrade your happy or sad ending!
+
+                example_code: |
+                    ## Exemple de code Hedy
+
+                    ```
+                    affiche 'OH NO! The T-rex is closing in!'
+                    end = demande 'Do you want a happy or a sad ending?'
+                    if end is happy
+                        affiche 'Just in time Richard jumps back into the time machine!'
+                        affiche 'Michael types in the code and...'
+                        affiche '💥ZAP!💥'
+                        affiche 'They are back in their garage'
+                    else
+                        affiche 'Michael yells COME ON RICHARD! RUN FASTER!'
+                        affiche 'But Richard is too slow...'
+                        affiche 'The T-rex closes in and eats him in one big bite!🦖'
+                    ```
+                start_code: ""
+            7:
+                story_text: |
+                    ## Histoire
+                    In a histoire, someone says words several times. For example, when someone calls for help or sings a song.
+                    You can put such repetitions in your histoire, in this level with `repeat`.
+
+                example_code: |
+                    ## Exemple de code Hedy
+
+                    ```
+                    affiche 'The prince kept calling for help'
+                    repeat 5 times affiche 'Help!'
+                    affiche 'Why is nobody helping me?'
+                    ```
+
+                start_code: "repeat 5 times affiche 'Help!'"
+            5:
+                story_text: |
+                    ## Histoire
+                    In this level you can program different endings, which will make your histoire even more fun.
+
+                    Think of two endings for your histoire, for example:
+
+                    - The princess is walking through the forest
+                    - She runs into a monster
+
+                    - Happy ending: She takes her sword and the monster quickly runs away
+                    - Bad Ending: The monster eats the princess
+
+                    You can also ensure that a name can be entered again. That works just like in the previous levels. You can combine that with an `if`, and then you have already made a whole program!
+
+                example_code: |
+                    ## Exemple de code Hedy
+
+                    ```
+                    name is demande Who is walking in the forest?
+                    affiche name 'walks through the forest'
+                    affiche name 'encounter a monster'
+                    end is demande Would you like a good or a bad ending?
+                    if end is good affiche name 'takes the sword and the monster quickly runs away'
+                    else affiche 'The monster eats' name
+                    ```
+                start_code: "affiche 'Here your histoire will start!'"
+            4:
+                story_text: |
+                    ## Histoire
+                    You may have noticed that there is still a problem in the previous levels. Did you try to affiche a sentence that contained the word name?
+                    You can solve that in this level. You must use quotation marks for everything that you are going to affiche.
+
+                example_code: |
+                    ## Exemple de code Hedy
+
+                    ```
+                    name is Hans
+                    affiche 'The name of the main character is' name
+                    affiche name 'is now going to walk in the woods'
+                    affiche name 'is a bit scared'
+                    animals is 🦔, 🐿, 🦉, 🦇
+                    affiche 'He hears the sound of an' animals at random
+                    affiche name 'is afraid this is a haunted forest'
+                    ```
+                start_code: "affiche 'Your histoire will be printed here!'"
+            3:
+                story_text: |
+                    ## Histoire
+                    Au niveau 3 you can make your histoire more fun. You can use randomness for any monster, animal or other obstacle.
+
+                example_code: |
+                    It goes like this:
+                    ```
+                    animals is 🦔, 🐿, 🦉, 🦇
+                    affiche He now hears the sound of an animals at random
+                    ```
+                story_text_2: |
+                    The command `add` can also come in handy in your histoire. For example:
+                    ```
+                example_code_2: |
+                    affiche He hears a sound
+                    animals is 🐿, 🦔, 🦇, 🦉
+                    animal is demande What do you think it is?
+                    add animal to animals
+                    affiche it was a animals at random
+                    ```
+                story_text_3: |
+                    This is an example of the `remove` command in your histoire
+                example_code_3: |
+                    ```
+                    affiche His backpack got way too heavy.
+                    affiche Inside were a bottle of water, a flashlight and a brick.
+                    bag is water, flashlight, brick
+                    dump is demande Which item should he dump?
+                    remove dump from bag
+                    ```
+                start_code: "affiche Your histoire"
+            15:
+                story_text: |
+                    ## Histoire
+                    Using the `while` loop can make your stories more interesting. For example, you can use `while game is 'on'` so you can play until the game is over.
+                    Or you can use `while sword is 'lost'` so the player can't continu the game until they have found something.
+
+                example_code: |
+                    ## Exemple de code Hedy
+
+                    ```
+                    keys = 'lost'
+                    affiche 'You are standing in your garden and you have lost your keys.'
+                    affiche 'Where do you want to look for them?'
+                    affiche 'You can choose: tree, flowerbed, rock, postbox'
+                    while keys == 'lost'
+                        location = demande 'Where do you want to look?'
+                        if location == 'flowerbed'
+                            affiche 'Here they are!'
+                            keys = 'found'
+                        else
+                            affiche 'Nope they are not at the ' location
+                    affiche 'Now you can enter the house!'
+                start_code: ""
+            13:
+                story_text: |
+                    ## Histoire
+                    By using the `and` and `or` commands, you can shorten your stories. For example, check out the dragon histoire.
+
+                example_code: |
+                    ## Exemple de code Hedy
+
+                    ```
+                    sword = 'lost'
+                    game = 'on'
+                    affiche 'Our hero is walking through the forest'
+                    affiche 'The path splits two ways'
+                    for i in range 0 to 2
+                        if game is 'on'
+                            path = demande 'Which path should she choose?'
+                            if path is 'left' and sword is 'found'
+                                affiche 'Our hero comes across a dragon!'
+                                affiche 'Luckily our hero has a sword to defeat the beast!'
+                                game = 'over'
+                            if path is 'left' and sword is 'lost'
+                                affiche 'Our hero finds a dragon, but she doesnt have any weapons!'
+                                affiche 'Our hero is beaten by the dragon...'
+                                affiche 'Try again'
+                                game = 'over'
+                            if path is 'right' and sword is 'found'
+                                affiche 'You have already found the sword. There is nothing left here.'
+                                affiche 'She walks back'
+                            if path is 'right' and sword is 'lost'
+                                affiche 'Our hero finds a sword'
+                                affiche 'This could come in very handy'
+                                sword = 'found'
+                    ```
+                start_code: ""
+    parrot:
+        name: "Parrot"
+        description: "Create your own online pet parrot that will copy you!"
+        image: "story.png"
+        default_save_name: "Parrot"
+        levels:
+            1:
+                story_text: |
+                    ## Parrot
+                    Create your own online pet parrot that will copy you!
+
+                example_code: |
+                    ## Exemple de code Hedy
+
+                    ```
+                    affiche Im Hedy the parrot
+                    demande whats your name?
+                    dit
+                    dit
+                    ```
+                start_code: "affiche Im Hedy the parrot"
+            2:
+                story_text: |
+                    ## Parrot
+                    Create your own online pet parrot that will copy you!
+
+                example_code: |
+                    ## Exemple de code Hedy
+
+                    ```
+                    affiche Im Hedy the parrot
+                    name is demande whats your name?
+                    affiche name
+                    sleep
+                    affiche squawk
+                    sleep
+                    affiche name
+                    ```
+                start_code: "affiche Im Hedy the parrot!"
+            3:
+                story_text: |
+                    ## Parrot
+                    Teach your parrot a new word with `add`.
+
+                example_code: |
+                    ## Exemple de code Hedy
+
+                    ```
+                    words is squawk, Hedy
+                    affiche Train your parrot!
+                    new_word is demande Which word do you want to teach them?
+                    add new_word to words
+                    affiche 🧒 Say new_word , Hedy!
+                    affiche 🦜 words at random
+                    ```
+                start_code: ""
+            5:
+                story_text: |
+                    ## Parrot
+                    Reward your parrot if it says the correct word!
+
+                example_code: |
+                    ## Exemple de code Hedy
+
+                    ```
+                    words is squawk, Hedy
+                    affiche 'Train your parrot!'
+                    new_word is demande 'Which word do you want to teach them?'
+                    add new_word to words
+                    said_word is words at random
+                    affiche '🧒 Say ' new_word ', Hedy!'
+                    affiche '🦜 ' said_word
+                    if said_word is new_word affiche '🧒 Great job, Hedy! 🍪'
+                    else affiche '🧒 No, Hedy! Say ' new_word
+                    ```
+                start_code: ""
+    songs:
+        name: "Sing a song!"
+        description: "Print a song"
+        image: "songs.png"
+        default_save_name: "Song"
+        levels:
+            12:
+                story_text: |
+                    ## Sing a song!
+                    In this song we can make it even easier to program 'if you're happy and you know it, clap your hands.' Because we can put all of the actions in a variable, check it out:
+                example_code: |
+                    ## Exemple de code Hedy
+
+                    ```
+                    actions = 'clap your hands', 'stomp your feet', 'shout Hurray!'
+                    for action in actions
+                        for i in range 1 to 2
+                            affiche 'if youre happy and you know it'
+                            affiche action
+                        affiche 'if youre happy and you know it and you really want to show it'
+                        affiche 'if youre happy and you know it'
+                        affiche action
+                    ```
+                start_code: ""
+            11:
+                story_text: |
+                    ## Songs
+                    In this level you can use the `for i in range` command to make songs that use counting.
+
+                    ## 5 little monkeys
+                    ```
+                    for i in range 5 to 1
+                        affiche i ' little monkeys jumping on the bed'
+                        affiche 'One fell off and bumped his head'
+                        affiche 'Mama called the doctor and the doctor said'
+                        if i is 1
+                            affiche 'PUT THOSE MONKEYS RIGHT TO BED!'
+                        else
+                            affiche 'NO MORE MONKEYS JUMPING ON THE BED!'
+                    ```
+                start_code: ""
+            10:
+                story_text: |
+                    ## Songs
+                    In this level you can easily make the childrens' song 'Five little monkeys.' Can you make the last chorus?
+                    You can also make the whole baby shark song (including all the other sharks in the family) in only 6 lines!
+                    Or you can make Old McDonald with all the different animals.
+
+                    ## 5 Little Monkeys Jumping on the bed
+                    ```
+                    monkeys = 5, 4, 3, 2
+                    for monkey in monkeys
+                        affiche monkey ' little monkeys jumping on the bed'
+                        affiche 'One fell off and bumped his head'
+                        affiche 'Mama called the doctor and the doctor said'
+                        affiche 'NO MORE MONKEYS JUMPING ON THE BED!'
+                    ```
+
+                    ## Baby Shark
+                    ```
+                    sharks = baby, mommy, daddy, grandma, grandpa
+                    for shark in sharks
+                        affiche shark 'tututututudu'
+                        affiche shark 'tututututudu'
+                        affiche shark 'tututututudu'
+                        affiche shark
+                    ```
+                    ## Old McDonald
+                    ```
+                    animals = pig, dog, cow
+                    for animal in animals
+                        if animal is pig
+                            sound = oink
+                        if animal is dog
+                            sound = woof
+                        if animal is cow
+                            sound = moo
+                        affiche 'Old McDonald had a farm'
+                        affiche 'E I E I O!'
+                        affiche 'and on that farm he had a ' animal
+                        affiche 'E I E I O!'
+                        affiche 'with a ' sound sound ' here'
+                        affiche 'and a ' sound sound ' there'
+                        affiche 'here a ' sound
+                        affiche 'there a ' sound
+                        affiche 'everywhere a ' sound sound
+                    ```
+                start_code: ""
+            8:
+                story_text: |
+                    ## Songs
+                    In a previous level you've programmed the song 'Bottles of beer.' You made one verse and then had to copy the verses 99 times. Au niveau 7 you can repeat the song 99 times, just by adding one simple line!
+
+                example_code: |
+                    ## Exemple de code Hedy
+
+                    ```
+                    verse = 99
+                    repeat 99 times
+                        affiche verse ' bottles of beer on the wall'
+                        affiche verse ' bottles of beer'
+                        affiche 'Take one down, pass it around'
+                        verse = verse - 1
+                        affiche verse ' bottles of beer on the wall'
+                    ```
+                start_code: ""
+            7:
+                story_text: |
+                    ## Songs
+                    Songs often contain a lot of repetition. For example... Baby Shark! If you sing it, you keep singing the same thing:
+
+                    Baby Shark tututudutudu <br>
+                    Baby Shark tututudutudu <br>
+                    Baby Shark tututudutudu <br>
+                    Baby Shark
+
+                    You can make this song much shorter with a `repeat`! Can you finish the code?
+
+                example_code: |
+                    ## Exemple de code Hedy
+
+                    ```
+                    repeat _ _ affiche 'Baby Shark tututudutudu'
+                    affiche 'Baby Shark'
+                    ```
+
+                    After Baby Shark you can of course also program other songs. There are many songs with repetition.
+                start_code: "affiche 'Baby Shark'"
+            6:
+                story_text: |
+                    ## Songs
+                    Songs often contain a lot of repetition. Sometimes the repetition is also based on counting.
+                    For example, in the well-known song 'Bottles of beer.' You can program that song with a little math.
+
+                example_code: |
+                    ## Exemple de code Hedy
+
+                    ```
+                    verse = 99
+                    affiche verse ' bottles of beer on the wall'
+                    affiche verse ' bottles of beer'
+                    affiche 'Take one down, pass it around'
+                    verse = verse - 1
+                    affiche verse ' bottles of beer on the wall'
+                    ```
+
+                    You can now repeat lines 2 to 9 as many times as you want by copying the lines.
+
+                start_code: "affiche 'Baby shark'"
+            16:
+                story_text: |
+                    ## Sing a song!
+                    In this level, you can program a song like OldMacDonald even more quickly. You can connect the right animal to the right sound by simply putting them in the same place in the list.
+                    The Drunken Sailor is also quickly made in this level. You only need 8 lines for the entire song, check it out!
+
+                    ## Old MacDonald
+                    ```
+                    animals = ['pig', 'dog', 'cow']
+                    sounds = ['oink', 'woof', 'moo']
+                    for i in range 1 to 3
+                        animal = animals[i]
+                        sound = sounds[i]
+                        affiche 'Old McDonald had a farm'
+                        affiche 'E I E I O!'
+                        affiche 'and on that farm he had a ' animal
+                        affiche 'E I E I O!'
+                        affiche 'with a ' sound sound ' here'
+                        affiche 'and a ' sound sound ' there'
+                        affiche 'here a ' sound
+                        affiche 'there a ' sound
+                        affiche 'everywhere a ' sound sound
+                    ```
+
+                    ## Drunken Sailor
+                    ```
+                    lines = ['what shall we do with the drunken sailor', 'shave his belly with a rusty razor', 'put him in a long boat till hes sober']
+                    for line in lines
+                        for i in range 1 to 3
+                            affiche line
+                        affiche 'early in the morning'
+                        for i in range 1 to 3
+                            affiche 'way hay and up she rises'
+                        affiche 'early in the morning'
+                    ```
+                start_code: ""
+    turtle:
+        name: "Turtle"
+        description: "Make your own drawing"
+        image: "turtle.gif"
+        default_save_name: "turtle"
+        levels:
+            1:
+                story_text: |
+                    ## Let's draw
+                    Au niveau 1 you can also use Hedy to draw. By combining turns and lines, you can make a square or a stair!
+
+                    Using `forward` you draw a line forwards. The number behind it determines how far the turtle will walk. `turn right` turns a quarter turn in clockwise direction, `turn left` turns counter clockwise.
+
+                    This is the start of a little staircase. Can you make it have 5 steps?
+
+                example_code: |
+                    ## Exemple de code Hedy
+
+                    ```
+                    turn right
+                    forward 50
+                    turn left
+                    forward 50
+                    ```
+
+
+                start_code: "forward 50\nturn left"
+            2:
+                story_text: |
+                    Au niveau 1 the turtle could only turn left or right. That is a bit boring!
+                    Au niveau 2 he can point his nose in all directions.
+
+                    Use 90 to turn a quarter. We call this degrees. A full turn is 360 degrees.
+                    Can you make a figure with this code? Maybe a triangle or a circle?
+
+                example_code: |
+                    ## Exemple de code Hedy
+
+
+                    ```
+                    affiche Drawing figures
+                    angle is 90
+                    turn angle
+                    forward 25
+                    turn angle
+                    forward 25
+                    ```
+                start_code: |
+                    affiche Turtle race!
+                    hoek is 90
+                    turn hoek
+                    forward 25
+            3:
+                story_text: |
+                    ## Searching turtle
+                    In this level you can use use `random` with the drawing turtle. A random choice makes the turtle walk a different path each time.
+                    Use `at random` to choose a value from a list. You can copy and paste lines 2 and 3 to create a longer random path.
+
+                example_code: |
+                    ## Exemple de code Hedy
+
+
+                    ```
+                    angles is 10, 50, 90, 150, 250
+                    turn angles at random
+                    forward 25
+                    ```
+
+                start_code: |
+                    angles is 10, 50, 90, 150, 250
+                    turn angles at random
+                    forward 25
+            4:
+                story_text: |
+                    ## Let's draw
+                    Au niveau 4 you have to use quotation marks with `affiche` and `demande`. Also when drawing!
+
+                example_code: |
+                    ## Exemple de code Hedy
+
+                    ```
+                    affiche 'Drawing figures'
+                    angle is 90
+                    turn angle
+                    forward 25
+                    turn angle
+                    forward 25
+                    ```
+
+                start_code: |
+                    affiche 'Drawing figures'
+                    angle is 90
+                    turn angle
+                    forward 25
+
+            5:
+                story_text: |
+                    ## Let's draw
+                    Au niveau 5 you can make a choice with `if`. For example between different types of figures.
+
+                example_code: |
+                    ## Exemple de code Hedy
+
+                    ```
+                    affiche 'Drawing Figures'
+                    figure is demande 'Do you want a square or a triangle?'
+                    if figure is triangle angle is 120
+                    else angle is 90
+                    turn angle
+                    forward 25
+                    turn angle
+                    forward 25
+                    turn angle
+                    forward 25
+                    turn angle
+                    forward 25
+                    ```
+                start_code: |
+                    affiche 'Drawing Figures'
+                    figure is demande 'Do you want a square or a triangle?'
+                    if figure is triangle angle is 120 else angle is 90
+                    turn angle
+                    forward 25
+            8:
+                story_text: |
+                    ## Let's draw
+                    Now that we can repeat several lines, we can make figures more easily.
+                    We only have to set the angle once and then use that variable in the `repeat`.
+
+                example_code: |
+                    ## Exemple de code Hedy
+
+                    ```
+                    angle = 90
+                    repeat 10 times
+                        turn angle
+                        forward 50
+                    ```
+                story_text_2: |
+                    ## Interaction
+                    Also, we can now improve the program that draws different figures.
+                    Can you figure out how far the turtle has to turn here? Finish the code and you can draw any polygon you'd like!
+
+                example_code_2: |
+                    ## Exemple de code Hedy
+
+                    ```
+                    angles = demande 'How many angles should I draw?'
+                    angle = 360 / angles
+                    repeat angle times
+                        turn _
+                        forward _
+                    ```
+                start_code: |
+                    hoeken = demande 'How many angles should I draw?'
+            7:
+                story_text: |
+                    ## Let's draw
+                    In this level you can repeat one line of code with `repeat`.
+
+                example_code: |
+                    ## Exemple de code Hedy
+
+                    ```
+                    affiche 'Draw figures'
+                    repeat 3 times forward 10
+                    ```
+                start_code: |
+                    affiche 'Draw figures'
+                    repeat 3 times forward 10
+
+            6:
+                story_text: |
+                    ## Let's draw
+                    In this level you can use calculations to draw different figures.
+                    You may have learned in school that turning a full circle is 360 degrees. If not, now you know!
+                    That's why you also use 90 degrees for a square. 360 divided by 4 is 90.
+                    Now that we can do math with Hedy, we can draw all the figures we want!
+
+                example_code: |
+                    ## Exemple de code Hedy
+
+                    ```
+                    angles = demande 'How many angles do you want?'
+                    angle = 360 / angles
+                    forward 50
+                    turn angle
+                    forward 50
+                    turn angle
+                    forward 50
+                    turn angle
+                    forward 50
+                    turn angle
+                    forward 50
+                    turn angle
+                    forward 50
+                    turn angle
+                    ```
+                start_code: |
+                    affiche 'Drawing figures'
+    dishes:
+        name: "Dishes?"
+        description: "Use the computer to see who does the dishes (Start at level 2)"
+        image: "dishes.png"
+        default_save_name: "Dishes"
+        levels:
+            10:
+                story_text: |
+                    ## Dishwashing
+                    In this level you could make an even better dish washing shedule.
+
+                    ## Hedy code example
+                    ```
+                    days = Monday, Tuesday, Wednesday, Thursday, Friday, Saturday, Sunday
+                    names = mom, dad, Emma, Sophie
+                    for day in days
+                        affiche names at random ' does the dishes on ' day
+                    ```
+                start_code: ""
+            7:
+                story_text: |
+                    ## Dishwashing
+                    With the `repeat` you can repeat pieces of code. You can use this to calculate who will be washing dishes for the entire week.
+
+                example_code: |
+                    ## Exemple de code Hedy
+
+                    ```
+                    people = mom, dad, Emma, Sophie
+                    repeat _ _ affiche 'the dishwasher is' _
+                    ```
+                start_code: "affiche 'Who does the dishes?'"
+            6:
+                story_text: |
+                    ## Dishwashing
+                    How often is everyone going to do the dishes? Is that fair? You can count it in this level.
+
+                example_code: |
+                    ## Exemple de code Hedy
+
+                    ```
+                    people = mom, dad, Emma, Sophie
+                    emma_washes = 0
+                    dishwasher = people at random
+                    affiche 'The dishwasher is' dishwasher
+                    if dishwasher is Emma emma_washes = emma_washes + 1
+                    affiche 'Emma will do the dishes this week' emma_washes 'times'
+                    ```
+
+                    Now you can copy lines 3 to 5 a few times (e.g. 7 times for a whole week) to calculate for a whole week again.
+                    Do you make the code for the whole week?
+
+                    ## Make it fair
+                    If you are extremely unlucky the previous program might choose you to to the dishes for the whole week! That's not fair!
+                    To create a fairer system you can use the `remove` command to remove the chosen person from the list. This way you don't have to do the dishes again untill everybody has had a turn.
+
+                    Monday and tuesday are ready for you! Can you add the rest of the week?
+                    And... can you come up with a solution for when your list is empty?
+                    ```
+                    people = mom, dad, Emma, Sophie
+                    dishwasher = people at random
+                    affiche 'Monday the dishes are done by: ' dishwasher
+                    remove dishwasher from people
+                    dishwasher = people at random
+                    affiche 'Tuesday the dishes are done by: ' dishwasher
+                    remove dishwasher from people
+                    dishwasher = people at random
+                    ```
+
+                start_code: "affiche 'Who does the dishes?'"
+            5:
+                story_text: |
+                    ## Dishwashing
+                    With the `if` you can now have more fun with choice in the program. You can have your program respond to the choice that the computer has made.
+
+                    Can you finish the code so that it prints 'too bad' when it is your turn and otherwise 'yes!'?
+                    Don't forget the quotes!
+
+                example_code: |
+                    ## Exemple de code Hedy
+
+                    ```
+                    people is mom, dad, Emma, Sophie
+                    dishwasher is people at random
+                    if dishwasher is Sophie affiche _ too bad I have to do the dishes _ else affiche 'luckily no dishes because' _ 'is already washing up'
+                    ```
+                start_code: "affiche 'Who does the dishes?'"
+            4:
+                story_text: |
+                    ## Dishwashing
+                    With quotation marks you can make your dishwashing planning more beautiful.
+                    This time the sample code is not quite complete.
+
+                    Can you complete the code by filling the blanks? Every blank must be replaced with one word of symbol.
+
+                    Tip: Don't forget the quotation marks!
+                example_code: |
+                    ## Exemple de code Hedy
+
+                    ```
+                    people is mom, dad, Emma, Sophie
+                    affiche _ the dishes are done by _
+                    sleep
+                    affiche people at _
+                    ```
+                start_code: "affiche 'Who does the dishes?'"
+            3:
+                story_text: |
+                    ## Dishwashing
+                    Do you always disagree at home about who should wash the dishes or change the litter box today?
+                    Then you can let the computer choose very fairly. You can program that in this level!
+                    You first make a list of the members of your family. Then choose 'at random' from the list.
+
+                example_code: |
+                    ## Exemple de code Hedy
+
+                    ```
+                    people is mom, dad, Emma, Sophie
+                    affiche people at random
+                    ```
+                    ## Hack the dishwashing program!
+                    Don't feel like doing the dishes yourself? Hack the program to remove your name from the list.
+
+                    ```
+                    people is mom, dad, Emma, Sophie
+                    your_name is demande Who are you?
+                    remove your_name from people
+                    affiche people at random does the dishes
+                    ```
+                start_code: "affiche Who does the dishes?"
+    dice:
+        name: "Dice"
+        description: "Make your own dice"
+        image: "dice.png"
+        default_save_name: "Dice"
+        levels:
+            10:
+                story_text: |
+                    ## Dice
+                    Is everybody taking too long throwing the dice? In this level you can let Hedy throw all the dice at once!
+
+                example_code: |
+                    ## Exemple de code Hedy
+
+                    ```
+                    players = Ann, John, Jesse
+                    choices = 1, 2, 3, 4, 5, 6
+                    for player in players
+                        affiche player ' throws ' choices at random
+                        sleep
+                    ```
+                start_code: ""
+            7:
+                story_text: |
+                    ## Dice
+                    You can also make a die again in level 5. With the `repeat` code you can easily roll a whole hand of dice.
+                    Try to finish the sample code! The dashes should contain multiple commands and characters.
+
+                    But maybe you want to make a completely different die. Of course you can!
+
+                example_code: |
+                    ## Exemple de code Hedy
+
+                    ```
+                    choices = 1, 2, 3, 4, 5, earthworm
+                    repeat _ _ affiche _ _ _
+                    ```
+                start_code: "affiche 'What will the die indicate this time?'"
+            6:
+                story_text: |
+                    ## Dice
+                    You can also make an Earthworm die again in this, but now you can also calculate how many points have been rolled.
+                    You may know that the worm counts 5 points for Earthworms. Now after a roll you can immediately calculate how many points you have thrown.
+                    This is the code to calculate points for one die:
+
+                example_code: |
+                    ## Exemple de code Hedy
+
+                    ```
+                    choices = 1, 2, 3, 4, 5, earthworm
+                    points = 0
+                    throw = choices at random
+                    affiche 'you threw' throw
+                    if throw is earthworm points = points + 5 else points = points + throw
+                    affiche 'those are' points ' point'
+                    ```
+                    Can you make the code so that you get the total score for 8 dice? To do that, you have to cut and paste some lines of the code.
+
+                    ## Looking forward
+
+                    Did you manage to calculate the score for 8 dice? That required a lot of cutting and pasting, right? We are going to make that easier in level 7!
+                start_code: "affiche 'What will the die indicate this time?'"
+            5:
+                story_text: |
+                    ## Dice
+                    You can also make a die again in this level using the `if`.
+                    Complete the sample code so that the code says "You can stop throwing" once you have thrown an earthworm.
+
+                    But maybe you want to recreate a die from a completely different game. That's fine too! Then make up your own reaction. Eg 'yes' for 6 and 'pity' for something else.
+
+                example_code: |
+                    ## Exemple de code Hedy
+
+                    ```
+                    choices is 1, 2, 3, 4, 5, earthworm
+                    throw is _
+                    affiche 'you have' _ 'thrown'
+                    if _ is earthworm affiche 'You can stop throwing.' _ affiche 'You have to hear it again!'
+                    ```
+                start_code: "affiche 'What will the die indicate this time?'"
+            4:
+                story_text: |
+                    ## Dice
+                    In this level we can make sentences with the die value in the sentence, with quotes of course.
+                    This time the sample code is not quite complete. Can you finish the code?
+
+                example_code: |
+                    ## Exemple de code Hedy
+
+                    ```
+                    choices is 1, 2, 3, 4, 5, earthworm
+                    affiche _ you threw _
+                    affiche _ _ _ <- here you have to program the choice
+                    ```
+
+                start_code: "affiche 'What will the die indicate this time?'"
+            3:
+                story_text: |
+                    ## Dice
+                    In this level we can choose from a list. With that we can let the computer choose one side of the die.
+                    Take a look at the games you have in your closet at home.
+                    Are there games with a (special) die? You can also copy it with this code.
+                    For example, the dice of the game Earthworms with the numbers 1 to 5 and an earthworm on it.
+
+                    ![Die of earthworms with 1 to 5 and an earthworm on it](https://cdn.jsdelivr.net/gh/felienne/hedy@24f19e9ac16c981517e7243120bc714912407eb5/coursedata/img/dobbelsteen.jpeg)
+
+                example_code: |
+                    ## Exemple de code Hedy
+
+                    ```
+                    choices is 1, 2, 3, 4, 5, earthworm
+                    affiche choices at random
+                    ```
+
+                start_code: "affiche What will the die indicate this time?"
+            15:
+                story_text: |
+                    ## Dice
+                    In this game you have to throw 6 in as little tries as possible.
+
+                example_code: |
+                    ## Exemple de code Hedy
+
+                    ```
+                    options = 1, 2, 3, 4, 5, 6
+                    affiche 'Throw 6 as fast as you can!'
+                    thrown = 0
+                    tries = 0
+                    while thrown != 6
+                        thrown = options at random
+                        affiche 'You threw ' thrown
+                        tries = tries + 1
+                    affiche 'Yes! You have thrown 6 in ' tries ' tries.'
+                    ```
+                start_code: ""
+    rock:
+        name: "Rock, paper, scissors"
+        description: "Make your own rock, paper, scissors game"
+        image: "rock.png"
+        default_save_name: "Rock"
+        levels:
+            1:
+                story_text: |
+                    ## Rock, paper, scissors
+                    Au niveau 1 you can start with a rock, paper, scissors  game.
+
+                    With `demande` you can make a choice, and with `dit` you can repeat that choice.
+
+                example_code: |
+                    ## Exemple de code Hedy
+
+
+                    ```
+                    affiche what do you choose?
+                    demande choose from rock, paper or scissors
+                    dit so your choice was:
+                    ```
+                    Instead of using words, you could also use emojis of course: ✊✋✌
+                start_code: "affiche Welcome to your own rock scissors paper!"
+            10:
+                story_text: |
+                    ## Rock, Paper, Scissors
+                    Feeling too lazy to play the game yourself? Let Hedy play it for you!
+
+                example_code: |
+                    ## Exemple de code Hedy
+
+                    ```
+                    choices = rock, paper, scissors
+                    players = Marleen, Michael
+                    for player in players
+                         affiche player ' chooses ' choices at random
+                    ```
+                start_code: ""
+            9:
+                story_text: |
+                    ## Rock, paper, scissors
+                    In this level you can program the whole rock, paper, scissors game by nesting the if-commands. Can you finish the code?
+                example_code: |
+                    ## Exemple de code Hedy
+
+                    ```
+                    choices is rock, paper, scisscors
+                    your_choice is demande 'What do you choose?'
+                    affiche 'You choose ' your_choice
+                    computer_choice is choices at random
+                    affiche 'The computer chooses ' computer_choice
+                    if computer_choice is your_choice
+                        affiche 'Tie'
+                    if computer_choice is 'rock'
+                        if your_choice is 'paper'
+                            affiche 'You win!'
+                        if your_choice is 'scissors'
+                            affiche 'You lose!'
+                    ```
+                start_code: ""
+            5:
+                story_text: |
+                    ## Rock, paper, scissors
+                    In this level we can determine who won.
+                    For that you need the new `if` code.
+
+                    Save your choice with the name of choice and the choice of computer as computer choice.
+                    Then you can use `if` to see if they are the same or different.
+                    Will you finish the code?
+
+                example_code: |
+                    ## Exemple de code Hedy
+
+                    ```
+                    options = rock, paper, scissors
+                    computer_choice is _
+                    choice is demande What do you choose?
+                    affiche 'you chose ' _
+                    affiche 'computer chose ' _
+                    if _ is _ affiche 'tie!' else affiche 'no tie'
+                    ```
+
+                    Fill in the correct code on the blanks to see if it is a draw.
+
+                start_code: "affiche 'Welcome to your own rock scissors paper!'"
+            4:
+                story_text: |
+                    ## Rock, paper, scissors
+                    In this level we can further program rock, paper, scissors. But if you want to add text, you have to use quotation marks here too.
+                    Do you complete the code by entering the correct commands or characters on the underscores?
+
+                example_code: |
+                    ## Exemple de code Hedy
+
+                    ```
+                    choices is rock, paper, scissors
+                    affiche _ The computer chose: _ _ at _
+                    ```
+                start_code: "affiche 'Welcome to your own rock scissors paper!'"
+            3:
+                story_text: |
+                    ## Rock, paper, scissors
+
+                    In this level we can enter lists and choose things from them.
+                    You first make a list with `is`. Then you can let the computer choose something from the list with `at random`.
+                    For example, you can let the computer pick from rock, paper and scissors.
+
+                example_code: |
+                    ## Exemple de code Hedy
+
+
+                    ```
+                    choices is rock, paper, scissors
+                    affiche choices at random
+                    ```
+                start_code: "affiche Welcome to your own rock scissors paper!"
+            2:
+                story_text: |
+                    ## Rock, paper, scissors
+                    In this level you can practise using the variables, so that you can make the rock, paper, scissors game in the next level!
+
+                example_code: |
+                    ## Exemple de code Hedy
+
+                    ```
+                    choice is _
+                    affiche I choose choice
+                    ```
+                start_code: ""
+            15:
+                story_text: |
+                    ## Rock, Paper, Scissors
+                    Play until you beat the computer! But first, finish the example code...
+
+                example_code: |
+                    ## Exemple de code Hedy
+
+                    ```
+                    won = 'no'
+                    options = 'rock', 'paper', 'scissors'
+                    while won == 'no'
+                        your_choice = demande 'What do you choose?'
+                        computer_choice = options at random
+                        affiche 'you chose ' your_choice
+                        affiche 'the computer chose ' computer_choice
+                        if computer_choice == your_choice
+                            affiche 'Tie!'
+                        if computer_choice == 'rock' and your_choice == 'scissors'
+                            affiche 'You lose!'
+                        if computer_choice == 'rock' and your_choice == 'paper'
+                            affiche 'You win!'
+                            won = 'yes'
+                start_code: ""
+            13:
+                story_text: |
+                    ## Rock, paper, scissors
+                    With the `and` command you can shorten your rock, paper, scissors code! Check out the example code below and try to finish it.
+
+                example_code: |
+                    ## Exemple de code Hedy
+
+                    ```
+                    options = 'rock', 'paper', 'scissors'
+                    your_choice = demande 'What do you choose?'
+                    computer_choice = options at random
+                    affiche 'You choose ' your_choice
+                    affiche 'The computer chooses ' computer_choice
+                    if computer_choice is your_choice
+                        affiche 'Tie'
+                    if computer_choice is 'rock' and your_choice is 'paper'
+                        affiche 'You win!'
+                    if computer_choice is 'rock' and your_choice is 'scissors'
+                        affiche 'The computer wins!'
+                    ```
+                start_code: ""
+    calculator:
+        name: "Calculator"
+        description: "Create a calculator"
+        image: "calculator.png"
+        default_save_name: "Calculator"
+        levels:
+            14:
+                story_text: |
+                    ## Guess which number
+                    In this level you can programm the game 'Guess which number'
+
+                example_code: |
+                    ## Exemple de code Hedy
+
+                    ```
+                    affiche 'Guess which number'
+                    numbers = 1, 2, 3, 4, 5, 6, 7, 8, 9, 10
+                    number = numbers at random
+                    game = 'on'
+                    for i in range 1 to 10
+                        if game == 'on'
+                            guess = demande 'Which number do you think it is?'
+                            if guess > number
+                                affiche 'Lower!'
+                            if guess < number
+                                affiche 'Higher!'
+                            if guess == number
+                                affiche 'You win!'
+                                game = 'over'
+                start_code: ""
+            12:
+                story_text: |
+                    ## Calculator
+                    Now you can make a calculator that works for decimal numbers.
+
+                example_code: |
+                    ## Exemple de code Hedy
+
+                    ```
+                    number1 = demande 'What is the first number?'
+                    number2 = demande 'What is the second number?'
+                    answer = number1 + number2
+                    affiche number1 ' plus ' number2 ' is ' answer
+                start_code: ""
+            10:
+                story_text: |
+                    ## Calculator
+                    This calculator game helps you practise your tables of multiplication!
+                    If you add more numbers to the list, you can practise all the multiplications.
+
+                example_code: |
+                    ## Exemple de code Hedy
+
+                    ```
+                    numbers = 1, 2, 3
+                    for number1 in numbers
+                        for number2 in numbers
+                            answer = demande 'How much is ' number2 ' times ' number1 '?'
+                            correct = number1 * number2
+                            if answer is correct
+                                affiche 'Great job!'
+                            else
+                                affiche 'Thats wrong. The right answer is ' correct
+                    ```
+                start_code: ""
+            9:
+                story_text: |
+                    ## Calculator
+                    In previous levels you've learned how to make a calculator, in this level you can expand that code and make it into a little maths game. Like this...
+
+                example_code: |
+                    ## Exemple de code Hedy
+
+                    ```
+                    score = 0
+                    repeat 10 times
+                        numbers = 1, 2, 3, 4, 5, 6, 7, 8, 9, 10
+                        number1 = numbers at random
+                        number2 = numbers at random
+                        correct_answer = number1 * number2
+                        affiche 'What is ' number1 ' times ' number2 '?'
+                        answer = demande 'Type your answer here...'
+                        affiche 'Your answer is' answer
+                        if answer is correct_answer
+                            score = score + 1
+                    affiche 'Great job! Your score is... ' score ' out of 10!'
+                    ```
+                start_code: "affiche 'Welcome to this calculator!'"
+            6:
+                story_text: |
+                    ## Calculator
+                    Now that you can calculate, you can also create a program to practice maths calculations. You can make up the calculations yourself, for example:
+
+                example_code: |
+                    ## Exemple de code Hedy
+
+                    ```
+                    correct_answer = 11 * 27
+                    answer = demande 'How much is 11 times 27?'
+                    if answer is correct_answer affiche 'good job!'
+                    else affiche 'Wrong! It was ' correct_answer
+                    ```
+                story_text_2: |
+                    ## Random numbers
+                    You can also let the computer do random sums on its own using random.
+                    This is how you choose a number of tables to practice, and from that you always get a different sum:
+
+                example_code_2: |
+                    ## Exemple de code Hedy
+
+                    ```
+                    tables = 4, 5, 6, 8
+                    numbers = 1, 2, 3, 4, 5, 6, 7, 8, 9, 10
+                    table = tables at random
+                    number = numbers at random
+                    correct_answer = table * number
+                    answer = demande 'how much is ' table ' times ' number '?'
+                    if answer is correct_answer affiche 'okay'
+                    else affiche 'mistake! it was ' correct_answer
+                    ```
+
+                start_code: "affiche 'Welcome to this calculator!'"
+            15:
+                story_text: |
+                    ## Calculator
+                    You can add the `while` loop to the calculator game you've learned to make in a previous level.
+                    This makes sure the player can't continue to the next question if they answer incorrectly.
+
+                example_code: |
+                    ## Exemple de code Hedy
+
+                    ```
+                    score = 0
+                    for i in range 0 to 9
+                        numbers = 1, 2, 3, 4, 5, 6, 7, 8, 9, 10
+                        number1 = numbers at random
+                        number2 = numbers at random
+                        correct = number1 * number2
+                        answer = 0
+                        while answer != correct
+                            affiche 'How much is ' number1 ' times ' number2 '?'
+                            answer = demande 'Fill in your answer:'
+                            affiche 'Your answer is ' answer
+                        affiche 'Good job!'
+                    affiche 'You win!'
+                    ```
+                start_code: ""
+    restaurant:
+        name: "Restaurant"
+        description: "Create your own virtual restaurant"
+        image: "restaurant.png"
+        default_save_name: "Restaurant"
+        levels:
+            1:
+                story_text: |
+                    ## Restaurant
+                     Au niveau 1 you can make your own virtual restaurant and take your guests' orders.
+
+                example_code: |
+                    ## Exemple de code Hedy
+
+                      ```
+                     affiche Welcome to Hedy's restaurant 🍟
+                     demande What would you like to order?
+                     dit So you would like to order
+                     affiche Thanks you for your order!
+                     affiche It's on its way!
+                     ```
+
+                    ## Challenge
+                    Can you think of more lines to add to your restaurant code? For example, can you demande the guests what they'd like to drink, tell them the price, or wish them a pleasant meal?
+                start_code: ""
+            2:
+                story_text: |
+                    ## Restaurant
+                    Au niveau 2 you could expand your restaurant by using variables. Au niveau 1 Hedy could only dit the order once and only remember the last thing that was ordered.
+                    Now you can use variables and Hedy can remember both the food and the drinks!
+
+                    ## Example Hedy Restaurant
+                    ```
+                    affiche Welcome to Hedy's restaurant!
+                    affiche Today we're serving pizza or lasagna.
+                    food is demande What would you like to eat?
+                    affiche Great choice! The food is my favorite!
+                    topping is demande Would you like meat or veggies on that?
+                    affiche food with topping is on its way!
+                    drinks is demande What would you like to drink with that?
+                    affiche Thank you for your order.
+                    affiche Your food and drinks will be right there!
+                    ```
+                start_code: ""
+            12:
+                story_text: |
+                    ## Restaurant
+                    From this level on you can use decimal numbers to make you menu more realistic.
+
+                example_code: |
+                    ## Exemple de code Hedy
+
+                    ```
+                    price = 0
+                    food = demande 'What would you like to order?'
+                    drinks = demande 'What would you like to drink?'
+                    if food is 'hamburger'
+                        price = price + 6.50
+                    if food is 'pizza'
+                        price = price + 5.75
+                    if drinks is 'water'
+                        price = price + 1.20
+                    if drink is 'soda'
+                        price = price + 2.35
+                    affiche 'That will be ' price ' dollar, please'
+                    ```
+                start_code: ""
+            11:
+                story_text: |
+                    ## Restaurant
+                    We can use the `for i in range 1 to 5` to affiche the orders from multiple customers in an orderly manner.
+
+                example_code: |
+                    ## Exemple de code Hedy
+
+                    ```
+                    affiche 'Welcome to Restaurant Hedy!'
+                    people = demande 'For how many people would you like to order?'
+                    for i in range 1 to people
+                        affiche 'Order number ' i
+                        food = demande 'What would you like to eat?'
+                        affiche food
+                        if food is fries
+                            sauce = demande 'What kind of sauce would you like with that?'
+                            affiche sauce
+                        drinks = demande 'What would you like to drink?'
+                        affiche drinks
+                    price = 4 * people
+                    affiche 'That will be ' price ' dollars, please!'
+                    ```
+                start_code: ""
+            10:
+                story_text: |
+                    ## Restaurant
+                    In this level you'll learn how to easily demande your guests' orders in a short code.
+
+                example_code: |
+                    ## Exemple de code Hedy
+
+                    ```
+                    courses = appetizer, main course, dessert
+                    for course in courses
+                        food = demande 'What would you like to eat as your ' course '?'
+                        affiche food ' will be your ' course
+                    ```
+
+                story_text_2: |
+                    ## Exemple de code Hedy
+
+                    Of course, you could also order for multiple people!
+
+                example_code_2: |
+                    ```
+                    courses = appetizer, main course, dessert
+                    names = Timon, Onno
+                    for name in names
+                        for course in courses
+                            food = demande name ', what would you like to eat as your ' course '?'
+                            affiche name ' orders ' food ' as their ' course
+                    ```
+                start_code: "courses = appetizer, main course, dessert"
+            9:
+                story_text: |
+                    ## Restaurant
+                    In this level you can use nesting to make your restaurant more realistic and more fun!
+                    For example you would demande for sauce if somebody orders fries, but you wouldn't if someone orders pizza!
+                    Check out the example, and try this at your own virtual restaurant!
+
+                example_code: |
+                    ## Exemple de code Hedy
+
+                    ```
+                    affiche 'Welcome to Hedys restaurant!'
+                    people = demande 'How many people will be joining us today?'
+                    affiche 'Great!'
+                    price = 0
+                    repeat people times
+                        food = demande 'What would you like to order?'
+                        affiche food
+                        if food is fries
+                            price = price + 3
+                            sauce = demande 'What kind of sauce would you like with your fries?'
+                            if sauce is no
+                                affiche 'no sauce'
+                            else
+                                price = price + 1
+                                affiche 'with ' sauce
+                        if food is pizza
+                            price = price + 4
+                    affiche 'That will be ' price ' dollar'
+                    affiche 'Enjoy your meal!'
+                    ```
+                start_code: ""
+            8:
+                story_text: |
+                    ## Restaurant
+                    In this level you can make your virtual restaurant more elaborate by repeating multiple lines of code. Like this:
+
+                    ```
+                    affiche 'Welcome to Hedys restaurant!'
+                    people = demande 'How many people will be joining us today?'
+                    affiche 'Great!'
+                    repeat people times
+                        food = demande 'What would you like to order?'
+                        affiche food
+                    affiche 'Thank you for ordering!'
+                    affiche 'Enjoy your meal!'
+                    ```
+
+                    ## Challenge
+                    Of course, this code can be expanded with more items on the menu, offering drinks, and/or multiple courses, so feel free to add as many options as you like!
+                start_code: ""
+            7:
+                story_text: |
+                    ## Restaurant
+                    In this level you've learned how to use the repeat command to repeat a line of code a certain amount of times.
+                    You can use that in your restaurant to demande multiple people what they'd like to eat. Like this:
+
+                    ```
+                    affiche 'Welcome to Hedys restaurant!'
+                    people = demande 'How many people are joining us today?'
+                    repeat people times food = demande 'What would you like to eat?'
+                    affiche 'Thanks for your order! Its coming right up!'
+                    ```
+                start_code: ""
+            6:
+                story_text: |
+                    ## Restaurant
+                    In this level you can use maths to calculate the total price of your customer's order, which can make your virtual restaurant more realistic.
+
+                example_code: |
+                    ## Exemple de code Hedy (Simple)
+                    You can make a simple restaurant code, like this:
+                    ```
+                    affiche 'Welcome to Hedys restaurant'
+                    affiche 'Here is our menu:'
+                    affiche 'Our main courses are pizza, lasagne, or spaghetti'
+                    main = demande 'Which main course would you like?'
+                    price = 0
+                    if main is pizza price = 10
+                    if main is lasagne price = 12
+                    if main is spaghetti price = 8
+                    affiche 'You have ordered ' main
+                    affiche 'That will be ' price ' dollars, please'
+                    affiche 'Thank you, enjoy your meal!'
+                    ```
+                story_text_2: |
+                    But you can also add many more things to your virtual restaurant, for example more courses.
+
+                example_code_2: |
+                    ## Exemple de code Hedy(Elaborate)
+                    In this example there are three courses, which requires more code and more additions in calculating the price.
+                    ```
+                    affiche 'Welcome to Hedys restaurant'
+                    affiche 'Here is our menu:'
+                    affiche 'Our starters are salad, soup, or carpaccio'
+                    affiche 'Our main courses are pizza, lasagne, or spaghetti'
+                    affiche 'Our desserts are brownie, icecream, or milkshake'
+                    starter = demande 'Which starter would you like to have?'
+                    main = demande 'Which main course would you like?'
+                    dessert = demande 'Which dessert do you pick?'
+                    price = 0
+                    if starter is soup price = price + 6 else price = price + 7
+                    if main is pizza price = price + 10
+                    if main is lasagne price = price + 12
+                    if main is spaghetti price = price + 8
+                    if dessert is brownie price = price + 7
+                    if dessert is icecream price = price + 5
+                    if dessert is milkshake price = price + 4
+                    affiche 'You have ordered ' starter ' , ' main ' and ' dessert
+                    affiche 'That will be ' price ' dollars, please'
+                    affiche 'Thank you, enjoy your meal!'
+                    ```
+                    ## Challenge
+                    You can add many more things to your virtual restaurant. For example, can you...
+                    - demande how many people are coming and multiply the price by that amount?
+                    - add another course?
+                    - give people a discount when they enter a (secret) couponcode?
+                    - add a children's menu?
+                    - think of other fun things to add?
+
+                start_code: ""
+            5:
+                story_text: |
+                    ## Restaurant
+                    In this level the if command allows you to demande your customers questions and give different responses to the answers.
+                    In the example below, you see that you can demande the customer if they want to hear the specials and Hedy can respond accordingly.
+
+                example_code: |
+                    ## Exemple de code Hedy
+
+                    ```
+                    affiche 'Welcome to Hedys restaurant!'
+                    special is demande 'Would you like to hear our specials today?'
+                    if special is yes affiche 'Todays special is chicken piri piri and rice.' else affiche 'No problem.'
+                    food is demande 'What would you like to eat?'
+                    affiche 'One ' food ', coming right up!'
+                    drink is demande 'What would you like to drink with that?'
+                    if drink is cola affiche 'Im sorry, we are out of cola!' else affiche 'Great choice!'
+                    anything is demande 'Would you like anything else?'
+                    affiche 'Let me repeat your order...'
+                    affiche 'One ' food
+                    if drink is cola affiche 'and...' else affiche 'One ' drink
+                    if anything is no affiche 'Thats it!' else affiche 'One ' anything
+                    affiche 'Thank you for your order and enjoy your meal!'
+                    ```
+
+                    ## Challenge
+                    Can you think of more questions to demande the customers when they are ordering, and make up different responses to their answers by using the if command?
+
+                start_code: ""
+            4:
+                story_text: |
+                    ## Restaurant
+                    In thsi level you have to use quotation marks when using the `affiche` command.
+                    Can you make your code from the previous levels work in this level too by adding the quotation marks?
+
+                    Be careful! In the previous levels apostrophes were allowed in the text, but in this level Hedy will confuse them for quotation marks and the code will not work!
+                    So instead of typing  `affiche Today we're serving pizza` , you should type `affiche 'Today we are serving pizza'`
+
+                    ## Example Hedy Restaurant
+                    ```
+                    affiche 'Welcome to Hedys restaurant!'
+                    affiche 'Today we are serving pizza or lasagna.'
+                    food is demande 'What would you like to eat?'
+                    affiche 'Great choice! The ' food ' is my favorite!'
+                    topping is demande 'Would you like meat or veggies on that?'
+                    affiche food ' with ' topping ' is on its way!'
+                    drinks is demande 'What would you like to drink with that?'
+                    affiche 'Thank you for your order.'
+                    affiche 'Your ' food ' and ' drinks ' will be right there!'
+                    ```
+                start_code: ""
+            3:
+                story_text: |
+                    ## Random Restaurant
+                    Having trouble to decide what you wanna have for dinner? You can let Hedy choose for you!
+                    Simply add lists of your favorite (or least favorite) meals and Hedy can randomly choose your dinner.
+                    You can also have a bit of fun, by letting Hedy choose the price for your dinner as well! What will you get?
+
+                example_code: |
+                    ## Exemple de code Hedy
+
+                    ```
+                    affiche Welcome to Hedy's Random Restaurant!
+                    affiche The only restaurant that will randomly choose your meal and its price for you!
+                    starters is salad, soup, carpaccio
+                    mains is pizza, brussels sprouts, spaghetti
+                    desserts is brownies, ice cream, french cheeses
+                    drinks is cola, beer, water
+                    prices is 1 dollar, 10 dollars, 100 dollars
+                    affiche You will start with: starters at random
+                    affiche Then we'll serve: mains at random
+                    affiche And as dessert: desserts at random
+                    affiche You will get a drinks at random to drink
+                    affiche That will be: prices at random
+                    affiche Thank you and enjoy your meal!
+                    ```
+                story_text_2: |
+                    ## Allergies
+                    Does your costumer have any allergies or do they dislike certain dishes? Then you can use the `remove`command to remove it from your menu.
+
+                example_code_2: |
+                    ```
+                    affiche Mystery milkshake
+                    flavors is strawberry, chocolate, vanilla
+                    allergies is demande Are you allergic to any falvors?
+                    remove allergies from flavors
+                    affiche You get a flavors at random milkshake
+                    ```
+                start_code: ""
+            15:
+                story_text: |
+                    ## Restaurant
+                    With the `while` you can make sure your costumers can keep adding orders until they are done.
+
+                example_code: |
+                    ## Exemple de code Hedy
+
+                    ```
+                    affiche 'Welcome at McHedy'
+                    more = 'yes'
+                    while more == 'yes'
+                        order = demande 'What would you like to order?'
+                        affiche order
+                        more = demande 'Would you like to order anything else?'
+                    affiche 'Thank you!'
+                start_code: ""
+            13:
+                story_text: |
+                    ## Restaurant
+                    In this level we can use the new commands to upgrade our restaurant.
+                    We use `and` to see if two things are both the case.
+
+                example_code: |
+                    ## Exemple de code Hedy
+                    ```
+                    price = 10
+                    food = demande 'What would you like to eat?'
+                    drinks = demande 'What would you like to drink?'
+                    if food is 'sandwich' and drinks is 'juice'
+                        affiche 'Thats our discount menu'
+                        price = price - 3
+                    affiche 'That will be ' price ' dollars'
+                    ```
+                story_text_2: |
+                    We use `or` to see if one our of two things is the case.
+
+                example_code_2: |
+                    ## Exemple de code Hedy
+                    ```
+                    drinks = demande 'What would you like to drink?'
+                    if drinks is 'water' or drinks is 'juice'
+                        affiche 'Thats a healthy choice'
+                    ```
+                start_code: ""
+    fortune:
+        name: "Fortune teller"
+        description: "Let Hedy predict the future"
+        image: "fortuneteller.png"
+        default_save_name: "Fortune Teller"
+        levels:
+            1:
+                story_text: |
+                    ## Fortune Teller
+                    Have you ever been to a carnival and had your future predicted by a fortune teller? Or have you ever played with a magic eight ball?
+                    Then you probably know that they can't really predict your future, but it's still fun to play!
+
+                    In the upcoming levels you can learn how to create your own fortune telling machine!
+                    Au niveau 1 you can start off easy by letting Hedy introduce herself as a fortune teller and let her dit the players' answers.
+                    Like this:
+
+                example_code: |
+                    ## Exemple de code Hedy
+
+                    ```
+                    affiche Hello, I'm Hedy the fortune teller!
+                    demande Who are you?
+                    affiche Let me take a look in my crystal ball
+                    affiche I see... I see...
+                    dit Your name is
+                    ```
+
+                    ## Challenge
+                    Hedy now only tells you your name. Can you expand the code so that Hedy can predict more things about you?
+
+                    Obviously, Hedy isn't a very good fortune teller yet, as she can only repeat the answers that were given by the players!
+                    Take a look in level 2 to improve your fortune teller.
+
+                start_code: ""
+            12:
+                story_text: |
+                    ## Fortune Teller
+                    In this level you can make your fortunes multiple words. Like in this example below:
+
+                example_code: |
+                    ## Exemple de code Hedy
+
+                    ```
+                    fortunes = 'you will be rich', 'you will fall in love', 'you will slip on a banana peel'
+                    affiche 'I will take a look in my crystall ball for your future.'
+                    affiche 'I see... I see...'
+                    sleep
+                    affiche fortunes at random
+                    ```
+                start_code: ""
+            10:
+                story_text: |
+                    ## Fortune Teller
+                    In this level you'll learn how to program the game MASH (mansion, apartement, shack, house). In this game you can predict for all the players at once, what their future will look like.
+
+                example_code: |
+                    ## Exemple de code Hedy
+
+                    ```
+                    houses = mansion, apartment, shack, house
+                    loves = nobody, a royal, their neighbour, their true love
+                    pets = dog, cat, elephant
+                    names = Jenna, Ryan, Jim
+                    for name in names
+                        affiche name ' lives in a ' houses at random
+                        affiche name ' will marry ' loves at random
+                        affiche name ' will get a ' pets at random ' as their pet.'
+                        sleep
+                    ```
+                story_text_2:
+                    We can also make a Harry Potter themed fortune teller.
+
+                example_code_2: |
+                    ## Exemple de code Hedy
+                    ```
+                    houses = Gryffindor, Slytherin, Hufflepuff, Ravenclaw
+                    subjects = potions, defence against the dark arts, charms, transfiguration
+                    fears = Voldemort, spiders, failing your OWL test
+                    names = Harry, Ron, Hermione
+                    for name in names
+                        affiche name ' is placed in ' houses at random
+                        affiche name ' is great at ' subjects at random
+                        affiche name 's greatest fear is ' fears at random
+                    ```
+                start_code: ""
+            8:
+                story_text: |
+                    ## Fortune Teller
+                    In the previous levels you've learned how to use repeat to make the fortune teller answer 3 questions in a row, but we had a problem with printing the questions.
+                    Now that problem is solved, because of the new way of using the repeat command.
+                    In the next example you can have your fortune teller demande 3 questions and also affiche them!
+
+                example_code: |
+                    ## Exemple de code Hedy
+
+                    ```
+                    affiche 'I am Hedy the fortune teller!'
+                    affiche 'You can demande me 3 questions.'
+                    answers = yes, no, maybe
+                    repeat 3 times
+                       question = demande 'What do you want to know?'
+                       affiche question
+                       sleep
+                       affiche 'My crystal ball says...' answers at random
+                    ```
+                start_code: ""
+            7:
+                story_text: |
+                    ## Fortune Teller
+                    In this level you can use the `repeat` command to make your machine tell multiple fortunes at once.
+
+                example_code: |
+                    ## Exemple de code Hedy
+
+                    ```
+                    affiche 'Im Hedy the fortune teller!'
+                    affiche 'You can demande 3 questions!'
+                    repeat 3 times question = demande 'What do you want to know?'
+                    answer = yes, no, maybe
+                    repeat 3 times affiche 'My crystal ball says... ' answer at random
+                    ```
+
+                    ## Challenge
+                    As you can see, the questions aren't printed in this example. That's because the variable `question` was changed 3 times.
+                    Every time the player fills in the new answer, Hedy overwrites the previous one, so the first answer the player gave is forgotten.
+                    This means you can't affiche all the questions this way.
+
+                    By using 3 different variables instead of 1 (for example `question1` , `question2` and `question3`), you could solve the problem and affiche the questions.
+                    This does mean that you can only use `repeat` for the answers, and you will have to demande and affiche all the questions separately.
+                    Can you do it?
+
+                    In the upcoming levels the layout of repeat command will change, which enables you to repeat multiple lines at once.
+                start_code: ""
+            6:
+                story_text: |
+                    ## Fortune Teller
+                    In this level you can use math in your predictions as a fortune teller. This allows you to make up (silly) formulas to calculate the future.
+                    For example you could calculate how rich you'll get or how many kids you will have when you grow up.
+
+                example_code: |
+                    ## Exemple de code Hedy
+
+                    ```
+                    affiche 'I am Hedy the fortune teller!'
+                    affiche 'I can predict how many kids youll get when you grow up!'
+                    age = demande 'How old are you?'
+                    siblings = demande 'How many siblings do you have?'
+                    length = demande 'How tall are you in centimetres?'
+                    kids = length / age
+                    kids = kids - siblings
+                    affiche 'You will get ...'
+                    sleep
+                    affiche kids ' kids!'
+                    ```
+
+                    ## Example Silly Fortune Teller
+                    If the previous example wasn't silly enough for you, take a look at this one!
+
+                    ```
+                    affiche 'Im Hedy the silly fortune teller!'
+                    affiche 'I will predict how smart you are!'
+                    football = demande 'On a scale 1-10 how much do you love football?'
+                    bananas = demande 'How many bananas did you eat this week?'
+                    hygiene = demande 'How many times did you wash your hands today?'
+                    result = bananas + hygiene
+                    result = result * football
+                    affiche 'You are ' result ' percent smart.'
+                    ```
+                start_code: ""
+            5:
+                story_text: |
+                    ## Fortune Teller
+                    In thsi level you'll learn to (secretly) tip the odds in your favor, when using the fortune teller!
+                    By using `if` and `else` you can make sure that you will always get a good fotune, while other people might not.
+                    Check out this example to find out how.
+
+                example_code: |
+                    ## Exemple de code Hedy
+
+                    ```
+                    affiche 'Im Hedy the fortune teller!'
+                    affiche 'I can predict if youll win the lottery tomorrow!'
+                    person is demande 'Who are you?'
+                    if person is Hedy affiche 'You will definitely win!🤩' else affiche 'Bad luck! Someone else will win!😭'
+                    ```
+
+                story_text_2: |
+                    Replace Hedy with your own name in the last line, and Hedy will always predict that you will win the lottery and others won't!
+                    Of course this might raise some suspicion with the other players... To avoid that, you can make sure that Hedy does give different answers every time you run the code.
+                    But of course, still gives you a positive answer and the other players a negative one.
+
+                example_code_2: |
+                    ## Exemple de code Hedy
+                    ```
+                    affiche 'Im Hedy the fortune teller!'
+                    affiche 'I can predict if you will win the lottery tomorrow!'
+                    person is demande 'Who are you?'
+                    goodanswer is Hurray! You win!, You will definitely win!, We have a winner!
+                    badanswer is Bad luck! Try again!, Another person will win, You lose!
+                    if person is Hedy affiche goodanswer at random else affiche badanswer at random
+                    ```
+
+                    ## Challenges
+                    This concept can be used to make may different programs, just be creative! For example you could create a machine that predicts that your favorite sports team will beat all the competitors!
+                    Or you could make  Snow White's magic mirror on the wall, to tell everyone you are the fairest of them all!
+                    Let your imagination do the work!
+
+                start_code: ""
+            4:
+                story_text: |
+                    ## Fortune Teller
+                    This level has no new functions, but allows you to practice with using the quotation marks.
+                    You can remake your level 3 code, and make sure to add the quotation marks in the right places!
+
+                    Mind that in level 3, we couldn't use the word 'question' as both the name of the variable and a normal word that could be printed.
+                    The quotation marks in level 3 make this possible!
+
+                    Important! Mind that now that we're using quotation marks, Hedy will get confused when you use the apostrophe for contractions like I'm or What's.
+                    Make sure to remove those apostrophes and change the spelling to Im or Whats.
+
+                example_code: |
+                    ## Exemple de code Hedy
+
+                    ```
+                    affiche 'Im Hedy the fortune teller!'
+                    question is demande 'What do you want to know?'
+                    affiche 'This is your question: ' question
+                    answers is yes, no, maybe
+                    affiche 'My crystal ball says...'
+                    sleep 2
+                    affiche answers at random
+                    ```
+                start_code: ""
+            3:
+                story_text: |
+                    ## Fortune Teller
+                    In the previous levels you've created your first fortune telling machine, but Hedy couldn't really predict anything, only dit.
+                    In this level you can use a variable and the `at random` command to really let Hedy choose an answer for you. Check out this code for instance:
+
+                example_code: |
+                    ## Exemple de code Hedy
+
+                    In this example the player can demande Hedy a yes-no question and Hedy will pick a random answer for you.
+                    ```
+                    affiche I’m Hedy the fortune teller!
+                    question is demande What do you want to know?
+                    affiche This is what you want to know: question
+                    answers is yes, no, maybe
+                    affiche My crystal ball says...
+                    sleep 2
+                    affiche answers at random
+                    ```
+
+                    ## Challenges
+                    Now, Hedy can only answer yes, no or maybe. Can you give Hedy more answer options, like 'definitely' or 'demande again.'
+                start_code: ""
+    haunted:
+        name: "Haunted House"
+        description: "escape from the haunted house"
+        image: "hauntedhouse.gif"
+        default_save_name: "Haunted House"
+        levels:
+            1:
+                story_text: |
+                    ## Haunted house
+                    In this adventure you are working towards making a game in which you have to escape from a haunted house by picking the correct door.
+                    If you pick the right door you'll survive, but if not a terrible monster might...
+
+                    Au niveau 1 we start our haunted house game by making up a scary histoire and demande the player what monster they'll see in the haunted house.
+
+                example_code: |
+                    ## Exemple de code Hedy
+
+
+                    ```
+                    affiche How did I get here?
+                    affiche I remember my friend telling me to go into the old mansion...
+                    affiche and suddenly everything went black.
+                    affiche But how did I end up on the floor...?
+                    affiche My head hurts like Ive been hit by a baseball bat!
+                    affiche What's that sound?
+                    affiche Oh no! I feel like Im not alone in this house!
+                    affiche I need to get out of here!
+                    affiche There are 3 doors in front of me..
+                    demande Which door should i pick?
+                    dit I choose door
+                    affiche ...?
+                    ```
+
+                    ## Challenge
+                    Can you finish the scary histoire? Or make up your own haunted house histoire?
+                start_code: "affiche How did I get here?"
+            2:
+                story_text: |
+                    ## Haunted House
+                    In this haunted house you can choose your monsters with emojis. Of course you could also use words.
+
+                    ## Example Hedy Code
+                    ```
+                    monster1 is 👻
+                    monster2 is 🤡
+                    monster3 is 👶
+                    affiche You enter the hounted house.
+                    affiche Suddenly you see a monster1
+                    affiche You run into the other room, but a monster2 is waiting there for you!
+                    affiche Oh no! Quickly get to the kitchen.
+                    affiche But as you enter monster3 attacks you!
+                    ```
+                start_code: "monster1 is _"
+            14:
+                story_text: |
+                    ## Haunted House
+                    In this level you can use the `<` and `>` symbol to introduce lives to your game.
+
+                example_code: |
+                    ## Exemple de code Hedy
+
+                    ```
+                    affiche 'Escape from the haunted house'
+                    lives = 3
+                    doors = 1, 2, 3
+                    monsters = 'the wicked witch', 'a zombie', 'a sleeping 3 headed dog'
+                    for i in range 1 to 10
+                        if lives > 0
+                            good_door = doors at random
+                            monster = monsters at random
+                            chosen_door = demande 'Which door do you choose?'
+                            if good_door == chosen_door
+                                affiche 'You have chosen the correct door'
+                            else
+                                affiche 'You see...' monster
+                                if monster == 'a sleeping 3 headed dog'
+                                    affiche 'Pffieuw.... Its asleep'
+                                else
+                                    affiche 'You lose one life'
+                                    lives = lives -1
+                        else
+                            affiche 'GAME OVER'
+                    ```
+                start_code: ""
+            11:
+                story_text: |
+                    ## Haunted House
+                    In this level we've changed the repeat command and we've added a line to our haunted house that tells the player in which room they are.
+
+                example_code: |
+                    ## Exemple de code Hedy
+
+                    ```
+                    affiche 'Escape from the Haunted House!'
+                    player is alive
+                    doors = 1, 2, 3
+                    monsters = zombie, vampire, giant spider
+                    for i in range 1 to 3
+                        if player is alive
+                            correct_door = doors at random
+                            affiche 'Room ' i
+                            affiche 'There are 3 doors in front of you...'
+                            chosendoor = demande 'Which door do you choose?'
+                            if chosendoor is correct_door
+                                affiche 'No monsters here!'
+                            else
+                                affiche 'You are eaten by a ' monsters at random
+                                player = dead
+                        else
+                            affiche 'GAME OVER'
+                    if player is alive
+                        affiche 'Great! You survived!'
+                    ```
+                start_code: "affiche 'Escape from the haunted house!'"
+            9:
+                story_text: |
+                    ## Haunted House
+                    In this level you can use nesting, which allows you to make the haunted house even more interactive!
+
+                example_code: |
+                    ## Exemple de code Hedy
+
+                    ```
+                    affiche 'Escape from the Haunted House!'
+                    player = alive
+                    doors = 1, 2, 3
+                    monsters = zombie, vampire, giant spider
+                    repeat 3 times
+                        if player is alive
+                            correct_door is doors at random
+                            affiche 'There are 3 doors in front of you...'
+                            chosen_door = demande 'Which door do you choose?'
+                            if chosen_door is correct_door
+                                affiche 'No monsters here!'
+                            else
+                                affiche 'You are eaten by a ' monsters at random
+                                player = dead
+                        else
+                            affiche 'GAME OVER'
+                    if player is alive
+                        affiche 'Great! You survived!'
+                    ```
+                    ## Challenge
+                    Now it's very hard to win this game, can you make it easier to win?
+                    For example by only having 1 wrong door and 2 correct doors instead of 1 correct door en 2 wrong ones?
+
+                start_code: "affiche 'Escape from the haunted house!'"
+            5:
+                story_text: |
+                    ## Haunted House
+                    Up until this level the haunted house game always asked the player to choose a door, but as you might have noticed, they didn't really have to answer correctly.
+                    If the player filled in a completely random answer, the game would still work and the player might even win (despite not picking a door).
+                    In this level you can only win the game by picking the same door Hedy picked randomly.
+
+                example_code: |
+                    ## Exemple de code Hedy
+
+                    ```
+                    affiche 'Escape from the haunted house!'
+                    affiche 'There are 3 doors in front of you...'
+                    doors is 1, 2, 3
+                    monsters is werewolf, mummy, vampire, zombie
+                    chosen_door is demande 'Which door do you choose?'
+                    affiche 'You chose door...' chosen_door
+                    sleep
+                    correct_door is doors at random
+                    if chosen_door is correct_door affiche 'Great! Youve escaped!'
+                    else affiche 'Oh no! You are being eaten by a...' monsters at random
+                    ```
+
+                start_code: ""
+            4:
+                story_text: |
+                    ## Haunted house
+                    In this level you learn how to use quotation marks in your games.
+                    Can you make your Haunted House level 4 proof?
+
+                start_code: ""
+            3:
+                story_text: |
+                    ## Haunted house game
+                    In the previous levels you've made an introduction to your haunted house game, but as you might have noticed the histoire would always have a dreadful end.
+                    In this level you can make your histoire more interactive by changing the outcome of the game; sometimes you'll get eaten, sometimes you'll escape!
+                    Let Hedy decide randomly!
+
+                example_code: |
+                    ## Exemple de code Hedy
+
+                    ```
+                    affiche Escape from the haunted house!
+                    affiche There are 3 doors in front of you...
+                    choice is demande Which door do you choose?
+                    affiche You picked door ... choice
+                    monsters is a zombie, a vampire, NOTHING YOUVE ESCAPED
+                    affiche You see...
+                    sleep
+                    affiche monsters at random
+                    ```
+
+                    ## Challenge
+                    This histoire is pretty straight forward, maybe you can spook it up a bit by adding a more exciting histoire.
+                    Also you have very limited outcomes right now, there are only 3 options of what's behind the doors. Maybe you can think of more monsters to add to the list!
+
+                    ## Change the game into a tv gameshow!
+                    Lastly, we'd like to challenge you to change this game into a gameshow (like the ones on tv) where you choose a door or suitcase and it contains a big price!
+                    Can you do it?
+                start_code: ""
+            16:
+                story_text: |
+                    ## Haunted House Game
+                    This haunted house game uses the connection between the lists you can use in this level.
+                    For example: all the properties that belong to the zombie are first in all the lists, witch second and vampire third.
+                    Check out the code!
+
+                example_code: |
+                    ## Exemple de code Hedy
+
+                    ```
+                    numbers = [1, 2, 3]
+                    i = numbers[random]
+                    hint = ['growling', 'a cackling laugh', 'fluttering batwings']
+                    monsters = ['zombie', 'witch', 'vampire']
+                    bad_fate = ['Your brain is eaten', 'You are forever cursed', 'You are bitten']
+                    good_fate = ['You throw the ham. The zombie is distracted and starts etaing it.', 'You set the curtains on fire. The witch flees out of fear for the fire', 'The vampire hates garlic and flees']
+                    weapons = ['ham', 'lighter', 'garlic']
+                    affiche 'You are standing in front of an old mension'
+                    affiche 'Something is not right here'
+                    affiche 'You hear ' hint[i]
+                    affiche 'You are going to explore it'
+                    affiche 'You enter the kitchen en see a lighter, a raw ham and a garlic.'
+                    your_weapon = demande 'What do you bring with you?'
+                    affiche 'With your ' your_weapon ' you enter the living room'
+                    affiche 'There you find a ' monsters[i]
+                    needed_weapon = weapons[i]
+                    if your_weapon == needed_weapon
+                        affiche 'You use your ' your_weapon
+                        affiche good_fate[i]
+                        affiche 'YOU WIN!'
+                    else
+                        affiche 'You have chosen the wrong weapon...'
+                        affiche bad_fate[i]
+                        affiche 'GAME OVER'
+                    ```
+                start_code: ""
+    piggybank:
+        name: Piggy Bank
+        description: Count your pocketmoney!
+        image: piggy.png
+        default_save_name: Piggy Bank
+        levels:
+            14:
+                story_text: |
+                    ## Piggybank
+                    In this level you can let Hedy tell you if you have saved up enough money!
+
+                example_code: |
+                    ## Exemple de code Hedy
+
+                    ```
+                    money = demande 'How much money have you saved?'
+                    wish = demande 'How much money do you need?'
+                    allowance = demande 'How much pocket money do you get each week?'
+                    to_save = wish - money
+                    weeks = to_save / allowance
+                    if wish > money
+                        affiche 'You need to save up some more!'
+                        affiche 'Youll need ' weeks ' more weeks.'
+                    else
+                        affiche 'Great! You have enough'
+                        affiche 'Lets go shopping!'
+                    ```
+                start_code: ""
+            12:
+                story_text: |
+                    ## Piggy Bank
+                    In this adventure you learn how to make a digital piggy bank, to calculate how much money you have and how long you need to save up to buy what you want!
+
+                example_code: |
+                    ## Exemple de code Hedy
+
+                    ```
+                    affiche 'The digital piggy bank'
+                    wish = demande 'What would you like to buy?'
+                    price = demande 'How much does that cost?'
+                    saved = demande 'How much money have you saved already?'
+                    allowance = demande 'How much pocket money do you get per week?'
+                    to_save = price - saved
+                    weeks = to_save / allowance
+                    affiche 'You can buy a ' wish ' in ' weeks ' weeks.'
+                start_code: ""
+    quizmaster:
+        name: Quizmaster
+        description: Make your own quiz!
+        image: quizmaster.png
+        default_save_name: Quizmaster
+        levels:
+            14:
+                story_text: |
+                    ## Make your own quiz
+                    In this adventure you can make your own quiz! Fill in the blanks, add more questions and enjoy your own quiz!
+                    You can make a quiz about anything you like: your hobby, your favorite animal, your favorite book or anything at all!
+
+                example_code: |
+                    ## Exemple de code Hedy
+
+                    ```
+                    affiche 'Make your own quiz'
+                    points_a = 0
+                    points_b = 0
+                    affiche 'Question'
+                    affiche 'Answer option A'
+                    affiche 'Answer option B'
+                    answer = demande 'Which answer?'
+                    if answer == 'A'
+                        points_a = points_a + 1
+                    if answer == 'B'
+                        points_b = points_b + 1
+                    affiche 'End of the quiz!'
+                    affiche 'Lets see the results!'
+                    if points_a > points_b
+                        affiche 'You belong to the A club'
+                    if points_b > points_a
+                        affiche 'You belong to the B club'
+                    ```
+
+                start_code: ""
+    language:
+        name: Language
+        description: Practice words in a foreign language
+        image: languages.png
+        default_save_name: language
+        levels:
+            5:
+                story_text: |
+                    ## Learn a new language
+                    Make your own program to practice your vocabulary in a new language.
+
+                    ## Exemple de code Hedy
+                    ```
+                    affiche 'Learn French!'
+                    cat is demande '🐱'
+                    if cat is chat affiche 'Terrific!'
+                    else affiche 'No, cat is chat'
+                    frog is demande '🐸'
+                    if frog is grenouille affiche 'Super!'
+                    else affiche 'No, frog is grenouille'
+                    ```
+                start_code: ""
+            16:
+                story_text: |
+                    ## Learn a new language
+                    Make your own program to practice your vocabulary in a new language.
+
+                example_code: |
+                    ## Exemple de code Hedy
+
+                    ```
+                    french_words = ['bonjour', 'ordinateur', 'pomme de terre']
+                    translation = ['hello', 'computer', 'potato']
+                    score = 0
+                    for i in range 1 to 3
+                        answer = demande 'What does ' french_words[i] ' mean?'
+                        correct = translation[i]
+                        if answer == correct
+                            affiche 'Correct!'
+                            score = score + 1
+                        else
+                            affiche 'Wrong, ' french_words[i] ' means ' translation[i]
+                    affiche 'You gave ' score ' correct answers.'
+                    ```
+                start_code: ""
+    next:
+        name: "What's next?"
+        description: "What's Next?"
+        image: ""
+        default_save_name: "next"
+        levels:
+            1:
+                story_text: |
+                    ## What's next?
+                    Congratulations! You've reached the end of level 1. Hopefully you've already made some awesome codes, but Hedy has a lot more to discover. 
+
+                    In the first level you might've notice that the `dit` command can only save one bit of information at a time. 
+                    For example in the restaurant adventure, you could dit what the costumer wanted to eat, or what they wanted to drink, but not both in one sentence. 
+
+                    ```
+                    affiche Welcome at Hedy's
+                    demande What would you like to eat?
+                    dit So you want 
+                    demande what would you like to drink?
+                    dit So you want 
+                    ```
+                    If the player types a hamburger and coke, you can't say `so you would like a hamburger and coke`, but you have to make two separate line. 
+                    Also, the `dit` command only echoes the word at the end of the sentence. So you can't say `your hamburger is coming right up!`.
+
+                    That changes in level 2. Au niveau 2 you'll learn to work with variables, that allow you to save multiple pieces of information and affiche them in any place you want.
+                    Besides, you'll learn how to work with the `at random` command, that you can use to make games. 
+                    So let's go to the next level!
+
+                start_code: "affiche Let's go!"
+            2:
+                story_text: |
+                    ## What's next?
+                    In this level you've learned what a variable is and how you can use it to make your adventures more interactive.
+                    But... that's not the only thing you can do with variables! You can also use variables to make lists.
+                    And you can even let Hedy pick a random word out of a list, which allows you to make real games!
+                    Take a quick look at the next level!
+                start_code: "affiche Let's go to the next level!"
+            3:
+                story_text: |
+                    ## What's next?
+                    In this level you've been practising with variables, but maybe you've come across this mistake.
+
+                    Try to run this code:
+                    ```
+                    name is Sophie
+                    affiche My name is name
+                    ```
+                    Of course you wanted to affiche `My name is Sophie` but Hedy prints `My Sophie is Sophie`. 
+                    In the next level this problem is fixed by using quotation marks.
+
+                start_code: "affiche Let's go to the next level!"
+            4:
+                story_text: |
+                    ## What's next?
+                    In the previous levels you've already learned to use `at random` which made your games different every time you ran the code.
+                    But it's not really interactive, the player doesn't have any influence on what happens in the game.
+
+                    In the next level you'll learn the `if` command, that allows you to give different responses in your program. This way you can program a secret password for your computer for example.
+                    So let's take a peak!
+
+                    ```
+                    password is demande 'What is the correct password?'
+                    ```
+                start_code: "affiche 'Lets go to the next level!'"
+            5:
+                story_text: |
+                    ## What's next?
+                    Now you've reached the end of this level, so you have learned `demande` and `if`. For example you can demande guests what they would like to eat.
+                    What you can't yet do though, is calculate the price for everyone's dinner.
+
+                    The next level makes it possible to use addition, subtraction and multiplication in your programs. This way you can calculate the prices in your restaurant, but you could also add a secret code to give your friends and family a discount.
+                    Another option in the next level is programming your own maths game, for your little brother or sister to practice their multiplications.
+                    Go see for yourself in the next level!
+                    ```
+                    affiche 'Welcome at McHedy'
+                    order is demande 'What would you like to eat?'
+                    affiche 'You would like ' order
+                    if order is hamburger price is 5
+                    if order is fries price is 2
+                    drinks is demande 'What would you like to drink?'
+                    affiche 'You would like ' drinks
+                    affiche 'That will be ' price ' dollars for your ' order ' please'
+                    affiche 'The drinks are free in this level because Hedy cant calculate the price yet...'
+                    ```
+                start_code: "affiche 'On to the next level!'"
+            6:
+                story_text: |
+                    ## What's next?
+                     Great job! You've reached the end of this level, which means you have practiced with `if` and `else`. You have probably noticed that your codes are getting longer and longer.
+                     For example if you want to program 'Happy Birthday'
+
+                     ```
+                     affiche 'happy birthday to you'
+                     affiche 'happy birthday to you'
+                     affiche 'happy birthday dear Hedy'
+                     affiche 'happy birthday to you'
+
+                     ```
+                     That's a lot of code for mainly the same words over and over again. Luckily in the next level has a solution with the `repeat` command, that allows you to repeat a line of code multiple times.
+                start_code: "affiche 'On to the next level!'"
+            7:
+                story_text: |
+                    ## What's next?
+                    Now you've learned how to repeat one single line of code. This comes in handy, but it's not always enough. Sometimes you want to repeat multiple lines at once.
+                    the next level allows you to group a couple of lines of code, and repeat that little group of lines all at once!
+
+                    ```
+                    repeat 5 times affiche 'In the next level you can repeat multiple lines of code at once!'
+                    ```
+
+                start_code: "affiche 'Lets go to the next level!'"
+            8:
+                story_text: |
+                    ## What's next?
+                    Great job! You've reached the end of another level! In this level you've learned to use multiple lines of code in an if of repeat command. But you can't yet combine the two...
+                    Good news! In the next level you will be allowed to put an if inside an if, or inside a repeat command.
+
+                    For example:
+                    ```
+                    answer = demande 'Would you like to go to teh next level?'
+                    if answer is 'yes'
+                        affiche 'Great! You can use the repeat commando in the if command!'
+                        affiche 'Hooray!'
+                        affiche 'Hooray!'
+                        affiche 'Hooray!'
+                    else
+                        affiche 'Okay, you can stay here for a little longer!'
+                    ```
+                    In this code Hedy will still say 'Your drink is on its way' even if you didn't even want to drink something! In the next level this will be fixed!
+                start_code: "affiche 'Lets go to the next level!'"
+            9:
+                story_text: |
+                    ## What's next?
+                    You're doing great! In this level we still face a small problem. You have learned to repeat lines, but what if you'd want to slightly change the line.
+                    For example if you want to sing the song 'if you're happy and you knwo it'
+
+                    It would look like this:
+                    ```
+                    repeat 2 times
+                        affiche 'if youre happy and you know it clap your hands'
+                    affiche 'if youre happy and you know it and you really want to show it'
+                    affiche 'if youre happy and you know it clap your hands'
+                    ```
+
+                    If you'd also want the next verse 'stomp your feet', and the next one, and the next one, you'd have to change the code completely.
+                    In the next level you'll learn the `for` command, which allows you to make a list of actions and repeat the code with another action each time!
+                    Please take a look!
+                start_code: "affiche 'Lets go to the next level!'"
+            10:
+                story_text: |
+                    ## What's next?
+                    You have reached the end of this level, you're doing great! You are about to go to the next level. In the higher levels, Hedy is focussing more and more on teaching you the programming language Python.
+                    In Python there is no `repeat` command, but there is a command that works like repeat. Are you curious to find out how to say `repeat` in Python language? Quickly go on to find out!
+                start_code: "affiche 'Lets go to the next level!'"
+            11:
+                story_text: |
+                    ## What's next?
+                    Maybe you have tried using decimal numbers in your restaurant adventure. If you did, you probably noticed that Hedy didn't understand them yet and always rounded off.
+                    From the next level on you can use decimal numbers.
+
+                    Another cool feauture in the next level is that you can use mulitiple words in a variable.
+                    For intance, you could already do this...
+                    ```
+                    name = demande 'Who is your favorite cartoon character?'
+                    affiche 'I love watching ' name
+                    ```
+                    But you couldn't use multiple words in a variable like the example below. This program does not work yet in this level!
+                    ```
+                    show = SpongeBob SquarePants
+                    affiche show 'is my favorite show!'
+                    ```
+                    Go to the next level to make this code work!
+                start_code: "affiche 'Lets go to the next level!'"
+            12:
+                story_text: |
+                    ## What's next?
+                    In the previous levels you learned how to put two `if`commands inside each other. This works fine, but it does give you very long and unhandy codes like this one:
+                    ```
+                    username is demande 'What is your username?'
+                    password is demande 'What is your password?'
+                    if username is 'Hedy'
+                        if password is 'secret'
+                            affiche 'Welcome Hedy!'
+                        else
+                            affiche 'Access denied'
+                    else
+                        affiche 'Access denied!'
+                    ```
+                    In this system you have to give both the correct username and the correct password.
+                    In the next level you will learn the `and` command that will make this code a ot shorter and more understandable!
+                    Check it out!
+                start_code: "affiche 'Lets go to the next level!'"
+            13:
+                story_text: |
+                    ## What's next?
+                    With the program below you can calulate if you've passed a subject at school (so, a grade of six or higher).
+                    You can see this code is extremely inefficient, du to the very long code in line 5.
+                    All the different grades from 1 to 5 had to be programmed seperately. Lucky for you, in the next level you'll learn how to do this without this extremely long code!
+                    ```
+                    first_grade = demande 'What score did you get on your first test?'
+                    second_grade = demande 'What score did you get on your second test?'
+                    added is first_grade + second_grade
+                    mean_grade is added / 2
+                    if mean_grade = 1 or mean_grade = 2 or mean_grade = 3 or mean_grade = 4 or mean_grade = 5
+                        affiche 'Oh no! You have failed the subject...'
+                    else
+                        affiche 'Great! You have passed the subject!'
+                    ```
+                start_code: "affiche 'Lets go to the next level!'"
+            14:
+                story_text: |
+                    ## What's next?
+                    In this game below a code has been made to make sure the player can play on as long as he/she wants...
+                    But the code is ineffective and way too long. Also, what if the player wants to play 101 games instead of 100?
+                    You can't play to infinity?
+                    In the next level you will learn a command that makes all of this a lot easier!
+                    ```
+                    game is 'on'
+                    for i in range 1 to 100
+                        if game is 'on'
+                            answer = demande 'Do you want to continue?'
+                            if answer is 'no'
+                                game is 'over'
+                            if answer is 'yes'
+                                affiche 'Ok we will continue'
+                    ```
+                start_code: "affiche 'Lets go to the next level!'"
+            15:
+                story_text: |
+                    ## What's next?
+                    In the next level we will grow a bit more towards real Python code. thon code. You will also learn how to match two lists together.
+                    This way you can program a code in which the correct animal is matched to the right sound.
+                    Because the two codes below... Are obviously nonsense!
+                    ```
+                    animals = 'chicken', 'horse', 'cow'
+                    sounds = 'cluck', 'neigh', 'moo'
+                    for animal in animals
+                        affiche 'A ' animal ' says ' sounds at random
+                    ```
+                    You could also try to make it work this way, but....
+                    ```
+                    animals = 'chicken', 'horse', 'cow'
+                    sounds = 'cluck', 'neigh', 'moo'
+                    for animal in animals
+                        for sound in sounds
+                            affiche 'A ' animal ' says ' sound
+                    ```
+                start_code: "affiche 'Lets go to the next level!'"
+            16:
+                story_text: |
+                    ## What's next?
+                    In the next level it's time for a new command. You might have noticed in the previous levels that `if` and `else` sometimes aren't enough.
+                    For example in this code:
+                    ```
+                    affiche 'What is for dinner tonight?'
+                    options = ['pizza', 'broccoli', 'green beans']
+                    chosen = options at random
+                    if chosen = pizza
+                        affiche 'Yummy! Pizza!'
+                    else
+                        affiche 'Yikes...'
+                    ```
+                    In this code it would be great to have 2x an `else` so you could have one option for the broccoli and one for the green beans. The next level comes with the new command `elif` that makes this possible!
+                    So check out the next level now!
+                start_code: "affiche 'Lets go to the next level!'"
+            17:
+                story_text: |
+                    ## What's next?
+                    In the next level you will learn a real Python way to use `affiche`.
+                start_code: "affiche 'Lets go to the next level!'"
+            18:
+                story_text: |
+                    ## What's next?
+                    Congratulations! You have reached the last level of Hedy! But no worries, we are working very hard to create more levels and new adventures. So please come back later to check out the newest levels!
+                start_code: "affiche ('Great job!!!')"
+    end:
+        name: "End"
+        description: "Test your Hedy knowledge"
+        image: ""
+        default_save_name: ""
+        levels:
+            1:
+                story_text: |
+                    ## End
+                    This is the end of the level! Take the quiz now to test your knowledge.
+                ## start_code is only added because it is required by the schema of Adventures
+                start_code: ""
+            2:
+                story_text: |
+                    ## End
+                    This is the end of the level! Take the quiz now to test your knowledge.
+                ## start_code is only added because it is required by the schema of Adventures
+                start_code: ""
+            3:
+                story_text: |
+                    ## End
+                    This is the end of the level! Take the quiz now to test your knowledge.
+                ## start_code is only added because it is required by the schema of Adventures
+                start_code: ""
+            4:
+                story_text: |
+                    ## End
+                    This is the end of the level! Take the quiz now to test your knowledge.
+                ## start_code is only added because it is required by the schema of Adventures
+                start_code: ""
+            5:
+                story_text: |
+                    ## End
+                    This is the end of the level! Take the quiz now to test your knowledge.
+                ## start_code is only added because it is required by the schema of Adventures
+                start_code: ""
+            6:
+                story_text: |
+                    ## End
+                    This is the end of the level! Take the quiz now to test your knowledge.
+                ## start_code is only added because it is required by the schema of Adventures
+                start_code: ""
+            7:
+                story_text: |
+                    ## End
+                    This is the end of the level! Take the quiz now to test your knowledge.
+                ## start_code is only added because it is required by the schema of Adventures
+                start_code: ""
+            9:
+                story_text: |
+                    ## End
+                    This is the end of the level! Take the quiz now to test your knowledge.
+                ## start_code is only added because it is required by the schema of Adventures
+                start_code: ""
